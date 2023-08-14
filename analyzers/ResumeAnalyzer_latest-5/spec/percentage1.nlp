@@ -1,0 +1,14 @@
+###############################################
+# FILE: percentage1
+# SUBJ: comment
+# AUTH: Kruthika
+# CREATED: 2023-6-21 9:34:46
+# MODIFIED:
+###############################################
+
+@PATH _ROOT _headerZone _LINE
+
+@RULES
+_percent <-
+	_xWILD [one match=(\% percentile)]	### (1)
+	@@

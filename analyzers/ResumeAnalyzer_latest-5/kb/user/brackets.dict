@@ -1,0 +1,10 @@
+" s=open open=1
+" s=open open=1
+( s=opens open=2
+) s=close open=2
+[ s=opens open=3
+] s=close open=3
+{ s=opens open=4
+} s=close open=4
+< s=opens open=5
+> s=close open=5

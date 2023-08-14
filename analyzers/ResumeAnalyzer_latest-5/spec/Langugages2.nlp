@@ -1,0 +1,16 @@
+###############################################
+# FILE: Langugages2
+# SUBJ: comment
+# AUTH: Kruthika
+# CREATED: 2023-6-21 9:30:25
+# MODIFIED:
+###############################################
+
+@MULTI _lang
+@POST
+"PLS.txt" << "con: " << N("$text",1) << "\n";
+single();
+@RULES
+_xNIL <-
+	_xALPHA	### (1)
+	@@

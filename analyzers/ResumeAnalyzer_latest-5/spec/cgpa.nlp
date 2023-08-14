@@ -1,0 +1,52 @@
+###############################################
+# FILE: cgpa
+# SUBJ: comment
+# AUTH: Kruthika
+# CREATED: 2023-6-21 21:48:18
+# MODIFIED:
+###############################################
+
+@PATH _ROOT _headerZone _LINE
+@POST
+L("num")=flt(N("$text",3)+"."+N("$text",5))*9.5;
+S("cgpa")=str(L("num"))+"%";
+S("type")=str(N("$text",1));
+S("val")=str(N("$text",3)+"."+N("$text",5));
+
+"floats.txt" << L("num") << "\n";
+single();
+@RULES
+_percentage <-
+	_xWILD [one match=(cgpa sgpa gpa)]	### (1)
+	_xWILD [optional]					### (2)
+	_xNUM								### (3)
+	\.									### (4)
+	_xNUM								### (5)
+	@@
+@POST
+L("num")=flt(N("$text",3))*9.5;
+S("cgpa")=str(L("num"))+"%";
+S("type")=str(N("$text",1));
+S("val")=str(N("$text",3));
+"floats.txt" << L("num") << "\n";
+single();
+@RULES
+_percentage <-
+	_xWILD [one match=(cgpa sgpa gpa)]	### (1)
+	_xWILD [optional]					### (2)
+	_xNUM								### (3)
+	@@
+@POST
+L("num")=flt(N("$text",1)+"."+N("$text",3))*9.5;
+S("cgpa")=str(L("num"))+"%";
+S("type")=str(N("$text",4));
+S("val")=str(N("$text",1)+"."+N("$text",3));
+"floats.txt" << L("num") << "\n";
+single();
+@RULES
+_percentage <-
+	_xNUM								### (1)
+	\. [optional]						### (2)
+	_xNUM [optional]					### (3)
+	_xWILD [one match=(cgpa sgpa gpa)]	### (4)
+	@@

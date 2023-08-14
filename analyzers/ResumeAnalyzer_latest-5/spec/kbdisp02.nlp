@@ -1,0 +1,14 @@
+###############################################
+# FILE: kbdisp02
+# SUBJ: comment
+# AUTH: Kruthika
+# CREATED: 2023-6-29 19:27:33
+# MODIFIED:
+###############################################
+
+
+@CODE
+
+DisplayKB(G("headerZone"),1);
+
+@@CODE

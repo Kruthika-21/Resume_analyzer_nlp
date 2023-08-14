@@ -1,0 +1,24 @@
+###############################################
+# FILE: bullets2
+# SUBJ: comment
+# AUTH: Kruthika
+# CREATED: 2023-6-16 17:34:27
+# MODIFIED:
+###############################################
+
+@PATH _ROOT _headerZone 
+@CHECK
+if(num(X("bullets",2))>=1){
+	succeed();
+}
+else{
+fail();}
+
+@POST
+S("con2") = MakeCountCon(X("con",2),"bullet");
+single();
+@RULES
+_bullets <-
+	_bullet
+	_xWILD[fail=(_bullet _sentend)]	### (1)
+	@@

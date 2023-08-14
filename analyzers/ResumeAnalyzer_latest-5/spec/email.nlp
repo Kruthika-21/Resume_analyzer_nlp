@@ -1,0 +1,22 @@
+###############################################
+# FILE: email
+# SUBJ: comment
+# AUTH: Kruthika
+# CREATED: 2023-7-8 11:43:4
+# MODIFIED:
+###############################################
+
+@PATH _ROOT _LINE _link
+
+@POST
+pnrename(X(3),"_email");
+# single();
+@RULES
+_email <-
+	_xWILD [one match=(_xSTART _xWHITE)]					### (1)
+	_xWILD [min =1 max=0 match=(_xALPHA _xNUM \/ \. \- \_ \$ \* \' \( \) )]	
+	\@
+	_xWILD [one match=(_xALPHA )]
+	_domain ### (2)	
+	_xWILD [min=0 max=1 match=(_domain)]						### (3)
+	@@

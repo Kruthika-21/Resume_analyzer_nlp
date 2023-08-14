@@ -1,0 +1,46 @@
+###############################################
+# FILE: percentage2
+# SUBJ: comment
+# AUTH: Kruthika
+# CREATED: 2023-6-21 9:36:13
+# MODIFIED:
+###############################################
+
+@PATH _ROOT _headerZone _LINE
+@CHECK
+L("num1")=num(N("$text",1));
+if(L("num1")<=99)
+{
+	succeed();
+}
+else
+fail();
+@POST
+X("percent",3) = N("$text",1)+"."+N("$text",3);
+S("type")="percent";
+S("val")=str(N("$text",1)+"."+N("$text",3));
+single();
+@RULES
+_percentage <-
+	_xNUM			### (1)
+	\. 	### (2)
+	_xNUM			### (3)
+	_percent		### (4)
+	@@
+@CHECK
+L("num1")=num(N("$text",1));
+if(L("num1")<=99)
+{
+	succeed();
+}
+else
+fail();
+@POST
+S("type")="percent";
+S("val")=str(N("$text",1));
+single();
+@RULES
+_percentage <-
+	_xNUM			### (1)
+	_percent		### (4)
+	@@

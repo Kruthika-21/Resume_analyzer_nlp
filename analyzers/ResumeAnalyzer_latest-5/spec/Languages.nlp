@@ -1,0 +1,25 @@
+###############################################
+# FILE: Skills1
+# SUBJ: comment
+# AUTH: Kruthika
+# CREATED: 2023-6-20 22:21:27
+# MODIFIED:
+###############################################
+
+@PATH _ROOT _headerZone
+@CHECK
+L("header") = str(X("header",2));
+if(strcontainsnocase("languages",L("header")))
+{
+	succeed();	
+}
+else
+fail();
+@POST
+"Languages.txt" << split(N("$text",1),",") << "\n";
+S("con4") = MakeCountCon(X("con",2),"languages spoken");
+AddLanguages(S("con4"),N("$text",1));
+@RULES
+_xNIL <-
+	_xWILD [one match=(_LINE)]	### (1)
+	@@

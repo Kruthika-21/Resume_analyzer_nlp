@@ -1,0 +1,191 @@
+headerZone
+  headerZone1: 
+    section=introduction
+    name="VAROON MARION"
+    prose=1
+    email="varoonm17@gmail.com"
+    Telephone=1
+    links="linkedin.com/in/varoon-marion-a59a8621a"
+    prose1: 
+      text="Student, Computer Science and Engineering, UVCE Curious and ever ready to learn new skills and technologies. Experienced Junior Researcher with a demonstrated history of learning new skills in the IT industry. Skilled in Java, Python, C, C++,Machine- Learning, Deep-Learning, Quantum computing and Azure cloud. Problem solver, working towards a Bachelor's degree focused in Computer Science from RV College Of Engineering."
+    Telephone1: 
+      type=mobile
+      area=121
+      prefix=436
+      station=5335
+      text=1214365335
+  headerZone2: 
+    section=education
+    education=2
+    education1: 
+      daterange=1
+      insitute="Visvesvaraya college of Engineering"
+      grade: 
+        num="92.245003%"
+        text="CGPA - 9.71"
+        type=CGPA
+        val="9.71"
+      daterange1
+        date1: 
+          day=1
+          month=10
+          year=10
+        date2: 
+          day=18
+          month=7
+          year=2023
+        daterange: 
+          "no of day"=12
+          "no of months"=9
+          "no of years"=2012
+    education2: 
+      daterange=1
+      insitute="National Public school"
+      grade: 
+        text="97.2%"
+        type=percent
+        val="97.2"
+      daterange1
+        date1: 
+          day=1
+          month=5
+          year=5
+        date2: 
+          day=1
+          month=5
+          year=5
+        daterange: 
+          "no of day"=0
+          "no of months"=0
+          "no of years"=0
+  headerZone3: 
+    section="work experience"
+    companies="L&T Technological Services"
+    prose=7
+    dateranges=2
+    prose1: 
+      text="Work with the strategic consulting teams of the eVTOL project in creating IT solutions in the aerospace industry. To create machine learning and deep learning models for optimization of eVTOL components."
+    prose2: 
+      text="Assist the professors of IISc NMCAD lab and other reputed institutes such as IIM-C in their research and development work of this project."
+    prose3: 
+      text="Developed multiple deep learning models for classiﬁcation of medical X-Rays on basis on anatomy of the human body."
+    prose4: 
+      text="Worked with the prominent medical imaging datasets such as CheXpert and MURA."
+    prose5: 
+      text="Used the PyTorch framework, DenseNet and ResNet models to develop the ML model during the internship."
+    prose6: 
+      text="Created a complete deep learning model using ResNet and progressive image resizing that scored an evaluation metric of 97% ."
+      percentage="97%"
+    prose7: 
+      text="Obtained approval from Technical Project Leader and letter of recommendation from LTTS."
+    dateranges1
+      date1: 
+        day=1
+        month=8
+        year=8
+      date2: 
+        day=18
+        month=7
+        year=2023
+      daterange: 
+        "no of day"=12
+        "no of months"=11
+        "no of years"=2014
+    dateranges2
+      date1: 
+        day=1
+        month=2
+        year=2
+      date2: 
+        day=1
+        month=3
+        year=3
+      daterange: 
+        "no of day"=26
+        "no of months"=0
+        "no of years"=1
+    education3: 
+      insitute="Indian institute of Science"
+  headerZone4: 
+    section=skills
+  headerZone5: 
+    section=projects
+    prose=4
+    dateranges=1
+    prose1: 
+      text="Software (RV Dental College) (08/2022 - Present) Create a chatbot using RASA and Microsoft Azure Bot Framework."
+      dateranges=1
+      dateranges1
+        date1: 
+          day=1
+          month=8
+          year=2022
+        date2: 
+          day=12
+          month=7
+          year=2023
+        daterange: 
+          "no of day"=12
+          "no of months"=11
+          "no of years"=0
+    prose2: 
+      text="Develop Patient Record Management software using open source software and integrate it with natural language processing."
+    prose3: 
+      text="Introduction to DevOps, pipeline of developing and deploying applications, with security and authentication using Microsoft Azure and Kubernetes."
+    prose4: 
+      text="Researched on multiple security measures such as VPNs and Azure Directories to choose the best option in the transmission of sensitive data from remote Edge Devices to Regional Cloud (AKS cluster). Obtained approval from mentors and Global Technology Leader."
+    dateranges1
+      date1: 
+        day=1
+        month=11
+        year=11
+      date2: 
+        day=1
+        month=2
+        year=2
+      daterange: 
+        "no of day"=1
+        "no of months"=3
+        "no of years"=0
+  headerZone6: 
+    section="certificates & publications"
+    dates=2
+    dates1: 
+      year=2022
+      "date normalized"="1:1:2022"
+      text=2022
+    dates2: 
+      year=2022
+      "date normalized"="1:1:2022"
+      text=2022
+    education4: 
+      insitute="Qiskit Global Summer school"
+  headerZone7: 
+    section=achievements
+    prose=2
+    prose1: 
+      text="Winner of IISc's Pravega MELAS Quiz (2022) Achieved the ﬁrst prize with a cash award of Rs. 4000."
+      dates=1
+      dates1: 
+        year=2022
+        "date normalized"="1:1:2022"
+        text=2022
+    prose2: 
+      text="Winner of the Times NIE Student of the Year Award: School Topper Class X Board Exam (2017 - 2018) Won an award worth Rs. 5000."
+      dateranges=1
+      dateranges1
+        date1: 
+          day=1
+          month=1
+          year=2017
+        date2: 
+          day=1
+          month=1
+          year=2018
+        daterange: 
+          "no of day"=0
+          "no of months"=12
+          "no of years"=0
+  headerZone8: 
+    section=interests
+

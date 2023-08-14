@@ -1,0 +1,58 @@
+SHARAN RAMAN
+UNDERGRAD STUDENT
+I'm a undergraduate student of BMV. College of
+Engineering, Banglore and currently I am in 5th
+sem as in year 2022-2023.
+www.linkedin.com/in/sharan-raman-501b77202/
+Mysuru road, Banglore,
+Karnataka (560060)
+sharanraman.cs20@bmv.edu.in
+sharanraman92@gmail.com
+9522319332
+AREAS OF EXPERTISE
+I've worked with various types of projects like
+machine learning, database, embedded
+systems and have mastered multiple
+programming languages like Python, C/C++,
+JAVA.
+EDUCATIONAL HISTORY
+Bharath Mata Vidhyalaya College of Engineering, Bangalore
+COMPUTER SCIENCE ENGINEERING
+2020-PRESENT
+CGPA 9.58 (upto 4th sem)
+S.Q. Public School, Kota, Rajasthan
+CLASS 12TH    |   PASSOUT YEAR : 2020
+PERCENTAGE - 94%
+CLASS 10TH    |   PASSOUT YEAR : 2018
+PERCENTAGE - 92%
+
+ACCOMPLISHMENTS
+Autonomous vehicle project, SERIN
+Mask rcnn for image segmentation and
+masking on real time data for
+autonomous vehicle
+
+HAL project
+Converting gnn(graph neural network)
+libraries into python language.
+
+HAL internship
+Providing sentimental analysis in english
+for distributed systems.
+
+EXTRA CURRICULAR INTERESTS
+Table Tennis,
+Chess, Cricket,
+Various NSS Events,
+Sketching,
+Painting.
+
+SKILLS
+Java
+Data structures
+And algorithms
+Neural Networks
+Python
+C/c++
+Computer
+Networks

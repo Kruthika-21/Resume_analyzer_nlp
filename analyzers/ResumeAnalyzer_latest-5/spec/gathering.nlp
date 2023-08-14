@@ -1,0 +1,31 @@
+###############################################
+# FILE: gathering
+# SUBJ: comment
+# AUTH: Kruthika
+# CREATED: 2023-6-13 13:39:38
+# MODIFIED:
+###############################################
+
+@PATH _ROOT _headerZone
+@PRE
+<1,1> var("next");
+@CHECK
+if(num(N("next",3))>0)
+{
+	fail();
+}
+else
+{
+	succeed();
+}
+@POST
+splice(1,2);
+single();
+@RULES
+_LINE <-
+	_xWILD [plus match=(_LINE)]	### (2)
+	_LINE						### (3)
+	@@
+
+
+

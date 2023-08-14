@@ -1,0 +1,31 @@
+###############################################
+# FILE: beginning2
+# SUBJ: comment
+# AUTH: Kruthika
+# CREATED: 2023-6-13 20:51:47
+# MODIFIED:
+###############################################
+
+@PATH _ROOT _headerZone _LINE
+
+@POST
+if((num(N("cap",2))<1)&&N("bet",2)==1){
+X("prose",3)=1;
+}
+else if((num(N("cap",2))<1)){
+X("prose",3)=1;
+}
+@RULES
+_xNIL <-
+	_xSTART	### (1)
+	_xALPHA	[s]### (2)
+	@@
+	
+@POST
+
+X("prose",3)=1;
+
+@RULES
+_xNIL <-
+	_sentend
+	@@

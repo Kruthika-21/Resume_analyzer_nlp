@@ -1,0 +1,14 @@
+###############################################
+# FILE: output
+# SUBJ: comment
+# AUTH: Kruthika
+# CREATED: 2023-7-24 17:3:24
+# MODIFIED:
+###############################################
+
+@CODE
+
+XMLOut(cbuf());
+XMLOut("output.xml");
+
+@@CODE

@@ -1,0 +1,64 @@
+###############################################
+# FILE: education2
+# SUBJ: comment
+# AUTH: Kruthika
+# CREATED: 2023-6-22 11:8:42
+# MODIFIED:
+###############################################
+
+@PATH _ROOT _headerZone _LINE
+@PRE
+<1,1> var("ispart");
+<3,3> var("ispart");
+@CHECK 
+if(num(pnvar(X(3),"hasedu"))==1){
+	succeed();
+}
+else
+{fail();}
+
+@POST
+S("name")=N("$text",1)+" "+N("$text",2)+" "+N("$text",3);
+single();
+@RULES
+_eduname <-
+	_xWILD [plus match=(_xALPHA \. \' _city)]
+	_edu
+	_xWILD [plus match=(_xALPHA )]	### (1)
+	@@
+
+@PRE
+<1,1> var("ispart");
+@CHECK 
+if(num(pnvar(X(3),"hasedu"))==1){
+	succeed();
+}
+else
+{fail();}
+@POST
+S("name")=N("$text",1)+" "+N("$text",2);
+single();
+@RULES
+_eduname <-
+	_xWILD [plus match=(_xALPHA \. \' _city)]	### (1)
+	_edu										### (2)
+	@@
+@PRE
+<2,2> var("ispart");
+@POST
+S("name")=N("$text",1)+" "+N("$text",2);
+single();
+@RULES
+_eduname <-
+	_edu										### (1)
+	_xWILD [plus match=(_xALPHA)]	### (2)
+	@@
+
+@POST
+S("name")=N("$text",1)+" "+N("$text",2);
+single();
+@RULES
+_eduname <-
+	_xWILD [one match=(iit IIT NIT nit)]	### (1)
+	_city							### (2)
+	@@

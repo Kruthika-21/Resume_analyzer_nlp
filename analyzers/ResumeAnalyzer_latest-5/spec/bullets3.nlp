@@ -1,0 +1,26 @@
+###############################################
+# FILE: bullets3
+# SUBJ: comment
+# AUTH: Kruthika
+# CREATED: 2023-6-16 19:17:15
+# MODIFIED:
+###############################################
+
+@PATH _ROOT _headerZone _bullets
+@POST
+splice(1,1);
+X("isbullet",3)=1;
+pnrename(X(3),"_prose");
+@RULES
+_xNIL <-
+	_bullet	### (1)
+	@@
+
+@POST
+splice(1,1);
+X("isbullet",3)=1;
+pnrename(X(3),"_prose");
+@RULES
+_xNIL <-
+	_LINE	### (1)
+	@@

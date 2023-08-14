@@ -1,0 +1,17 @@
+###############################################
+# FILE: gathering3
+# SUBJ: comment
+# AUTH: Kruthika
+# CREATED: 2023-6-13 13:44:17
+# MODIFIED:
+###############################################
+
+@PATH _ROOT _headerZone _prose
+@POST
+splice(1,1);
+splice(2,2);
+@RULES
+_xNIL <-
+	_LINE
+	_follow	### (1)
+	@@

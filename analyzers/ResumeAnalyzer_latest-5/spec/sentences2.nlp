@@ -1,0 +1,20 @@
+###############################################
+# FILE: sentences2
+# SUBJ: comment
+# AUTH: Kruthika
+# CREATED: 2023-6-4 11:8:56
+# MODIFIED:
+###############################################
+@PATH _ROOT _headerZone _LINE
+
+@POST
+L("firstword")=N("$text",1) ;
+if(strislower(L("firstword"))){
+X("contd")=1;
+}
+@RULES
+_xNIL <-
+	_xWILD [match=(_xALPHA _xNUM)]						### (1)
+	_xWILD [min=0 max=0 match=(_xALPHA _CNTRL _xNUM)]	### (2)
+	_xWILD [fail = (_xEND )]							### (3)
+	@@

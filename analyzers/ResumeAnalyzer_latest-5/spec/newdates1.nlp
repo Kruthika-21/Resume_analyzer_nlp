@@ -1,0 +1,86 @@
+###############################################
+# FILE: newdates1
+# SUBJ: comment
+# AUTH: Kruthika
+# CREATED: 2023-6-10 6:55:33
+# MODIFIED:
+###############################################
+
+@PATH _ROOT _LINE
+
+@PRE
+<3,3> vareq("date","month");
+
+@CHECK
+if(N("year",6)==1 && N(1) && N("day",1)==1){
+  succeed();}
+  else if(N("year",6)==1 && !N(1))
+  {
+    succeed();
+  }
+else
+{
+  fail();
+}
+@POST
+S("datetype")=1;
+L("day")=N("$text",1);
+ L("month")=N("numeric",3);
+ if(num(N("$text",6))>0 && num(N("$text",6))<=30)
+ {
+  L("year")=2000+num(N("$text",6));
+ }
+ else if (num(N("$text",6))>51 && num(N("$text",6))<=99)
+ {
+  L("year")=1900+num(N("$text",6));
+ }
+ else
+ L("year")=N("$text",6);
+ S("dateis")=str(L("day"))+":"+str(L("month"))+":"+str(L("year"));
+single();
+@RULES
+_date <-
+  _xNUM 							### (1)
+  _xWILD [min=0 max=1 match=(_xWHITE \- \/)]	### (2)
+  _xALPHA [trig]		### (3)
+  \, [optional]						### (4)
+  _xWILD [min=0 max=1 match=(_xWHITE \- )]	### (5)
+  _xNUM 					### (6)
+	@@
+
+@PRE
+<1,1> vareq("date","month");
+
+@CHECK
+if(N("year",6)==1 && N("day",3)==1){
+  succeed();}
+else
+{
+  fail();
+}
+@POST
+S("datetype")=2;
+L("day")=N("$text",3);
+L("month")=N("numeric",1);
+ if(num(N("$text",6))>0 && num(N("$text",6))<=30)
+ {
+  L("year")=2000+num(N("$text",6));
+ }
+ else if (num(N("$text",6))>51 && num(N("$text",6))<=99)
+ {
+  L("year")=1900+num(N("$text",6));
+ }
+ else
+ L("year")=N("$text",6);
+ S("dateis")=str(L("day"))+":"+str(L("month"))+":"+str(L("year"));
+single();
+@RULES
+_date <-
+  _xALPHA		### (1)
+  _xWILD [min=0 max=1 match=(_xWHITE \- \/)]	### (2)
+  _xNUM							### (3)
+  _xWILD [one match=(_xNIL \,)]		### (4)
+  _xWILD [min=0 max=1 match=(_xWHITE \- )]	### (5)
+  _xNUM 					### (6)
+	@@
+  ## make a function

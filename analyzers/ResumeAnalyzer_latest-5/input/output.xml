@@ -1,0 +1,370 @@
+<resume>
+	<headerZone>
+		<section>introduction</section>
+		<name>ANUVA GOYAL</name>
+		<email>anuvagoyal111@gmail.com</email>
+		<links>
+			<link>github.com/AnuvaGoyal</link>
+			<link>blog.insycle.com/phone-number-formatting-crm</link>
+			<link>www.blogger.com/blog/page/edit/533760858119015977/8865589993266128374?hl=en</link>
+		</links>
+		<Telephone></Telephone>
+		<Telephone>
+			<area>212</area>
+			<prefix>456</prefix>
+			<station>7890</station>
+			<text>+1-212-456-7890</text>
+		</Telephone>
+		<Telephone>
+			<type>mobile</type>
+			<area>384</area>
+			<prefix>757</prefix>
+			<station>6353</station>
+			<text>3847576353</text>
+		</Telephone>
+		<Telephone>
+			<type>landline</type>
+			<area>456</area>
+			<station>7890</station>
+			<text>456-7890</text>
+		</Telephone>
+	</headerZone>
+	<headerZone>
+		<section>projects</section>
+		<bullet></bullet>
+		<bullet>
+			<links>counselchat.com</links>
+			<text>Mental Healthcare Chatbot that provides ad- vice to the user based on diﬀerent categories of mental health problems using a dataset webscraped from counselchat.com (Nov 2021)</text>
+			<dates></dates>
+			<dates>
+				<month>11</month>
+				<year>2021</year>
+				<date_normalized>1:11:2021</date_normalized>
+				<text>Nov 2021</text>
+			</dates>
+		</bullet>
+		<bullet>
+			<text>Full stack Speech Emotion based Movie Recommender System using the RAVDESS Dataset and Web Scraping techniques (Oct 2021)</text>
+			<dates></dates>
+			<dates>
+				<month>10</month>
+				<year>2021</year>
+				<date_normalized>1:10:2021</date_normalized>
+				<text>Oct 2021</text>
+			</dates>
+		</bullet>
+		<bullet>
+			<text>Finding a Perfect Fit, a model to parse re- sumes using Pytesseract, NLP and XG Boost and Random Forest classiﬁcation techniques (Aug 2021)</text>
+			<dates></dates>
+			<dates>
+				<month>8</month>
+				<year>2021</year>
+				<date_normalized>1:8:2021</date_normalized>
+				<text>Aug 2021</text>
+			</dates>
+		</bullet>
+		<bullet>
+			<text>Face Mask Detection which detects the face using Haar Cascade Classiﬁer and classiﬁes the image into one of the three categories- Without Mask, With Mask and Incorrect Mask (6 May 2021)</text>
+			<dates></dates>
+			<dates>
+				<day>6</day>
+				<month>5</month>
+				<year>2021</year>
+				<date_normalized>6:5:2021</date_normalized>
+				<text>6 May 2021</text>
+			</dates>
+		</bullet>
+	</headerZone>
+	<headerZone>
+		<section>education</section>
+		<education></education>
+		<links>researchgate.net/proﬁle/Anuva_Goyal</links>
+		<education>
+			<daterange></daterange>
+			<insitute>Dayalbagh Educational institute</insitute>
+			<city>agra</city>
+			<grade>
+				<num>88.825005%</num>
+				<text>SGPA 9.35</text>
+				<type>SGPA</type>
+				<val>9.35</val>
+			</grade>
+			<daterange>
+				<date>
+					<day>1</day>
+					<month>7</month>
+					<year>2019</year>
+				</date>
+				<date>
+					<day>18</day>
+					<month>7</month>
+					<year>2023</year>
+				</date>
+				<daterange>
+					<no_of_day>6</no_of_day>
+					<no_of_months>0</no_of_months>
+					<no_of_years>4</no_of_years>
+				</daterange>
+			</daterange>
+		</education>
+		<education>
+			<date></date>
+			<insitute>St. Clare's Senior Secondary school</insitute>
+			<city>agra</city>
+			<grade>
+				<text>94%</text>
+				<type>percent</type>
+				<val>94</val>
+			</grade>
+			<date>
+				<year>2019</year>
+				<date_normalized>1:1:2019</date_normalized>
+				<text>2019</text>
+			</date>
+		</education>
+		<education>
+			<date></date>
+			<insitute>St. Clare's Senior Secondary school</insitute>
+			<city>agra</city>
+			<grade>
+				<num>95.000000%</num>
+				<text>CGPA 10</text>
+				<type>CGPA</type>
+				<val>10</val>
+			</grade>
+			<date>
+				<year>2017</year>
+				<date_normalized>1:1:2017</date_normalized>
+				<text>2017</text>
+			</date>
+		</education>
+	</headerZone>
+	<headerZone>
+		<section>skills</section>
+		<skill></skill>
+		<proglangs>
+			<proglang>C</proglang>
+			<proglang>C++</proglang>
+			<proglang>Python</proglang>
+			<proglang>SQL</proglang>
+			<proglang>CSS</proglang>
+			<proglang>HTML</proglang>
+		</proglangs>
+		<skill>
+			<text>c</text>
+		</skill>
+		<skill>
+			<text>python</text>
+		</skill>
+		<skill>
+			<text>Data Structures</text>
+		</skill>
+		<skill>
+			<text>css</text>
+		</skill>
+		<skill>
+			<text>Machine Learning Frameworks: NumPy, Pandas, Tensorﬂow, Scikit-Learn, OpenCV, Pytesseract, BeautifulSoup</text>
+		</skill>
+	</headerZone>
+	<headerZone>
+		<section>interests</section>
+		<bullet></bullet>
+		<bullet>
+			<text>ML and Deep Learning.</text>
+		</bullet>
+		<bullet>
+			<text>NLP and Computer Vision</text>
+		</bullet>
+	</headerZone>
+	<headerZone>
+		<section>my experience</section>
+		<companies>
+			<companie>Genisup India Pvt.</companie>
+			<companie>VUGS Technologies Pvt.</companie>
+		</companies>
+		<bullet></bullet>
+		<dateranges></dateranges>
+		<bullet>
+			<text>Internship on the topic NLP: Topic Modeling to assign the theme or topic for any news article on internet using Machine Learning techniques.</text>
+		</bullet>
+		<bullet>
+			<text>Worked on proxy rotation and Web Scraping</text>
+		</bullet>
+		<bullet>
+			<text>Performed LDA Topic Modeling on “The Hindu” news articles and obtained precision score of 0.906. Intern Trainee VUGS Technologies Pvt. Ltd., Agra, Uttar Pradesh May 2021 - June 2021 Remote</text>
+			<dateranges></dateranges>
+			<dateranges>
+				<date>
+					<day>1</day>
+					<month>5</month>
+					<year>2021</year>
+				</date>
+				<date>
+					<day>1</day>
+					<month>6</month>
+					<year>2021</year>
+				</date>
+				<daterange>
+					<no_of_day>1</no_of_day>
+					<no_of_months>1</no_of_months>
+					<no_of_years>0</no_of_years>
+				</daterange>
+			</dateranges>
+		</bullet>
+		<bullet>
+			<text>Built an OCR using Pytesseract and NER Text Classiﬁcation Model to categorize detected text into Name, E-mail Address, Phone number and Date using NLTK,SpaCy and BERT</text>
+		</bullet>
+		<bullet>
+			<text>Created an OCR for Handwritten text [A-Z, 0-9] using CNN architecture</text>
+			<dates></dates>
+			<dates>
+				<month>0</month>
+				<year>2009</year>
+				<date_normalized>1:0:2009</date_normalized>
+				<text>0-9</text>
+			</dates>
+		</bullet>
+		<bullet>
+			<text>Built a Face Recognition Model and Face Mask Detection Model using OpenCV and Haar Cascade Classiﬁer.</text>
+		</bullet>
+		<dateranges>
+			<date>
+				<day>1</day>
+				<month>6</month>
+				<year>2021</year>
+			</date>
+			<date>
+				<day>1</day>
+				<month>8</month>
+				<year>2021</year>
+			</date>
+			<daterange>
+				<no_of_day>1</no_of_day>
+				<no_of_months>2</no_of_months>
+				<no_of_years>0</no_of_years>
+			</daterange>
+		</dateranges>
+	</headerZone>
+	<headerZone>
+		<section>trainings</section>
+		<companies>Google LLC</companies>
+		<prose></prose>
+		<dateranges></dateranges>
+		<proglangs>Python</proglangs>
+		<prose>
+			<text>Machine Learning A-Z: Hands on Python and R in Data Science</text>
+		</prose>
+		<dateranges>
+			<date>
+				<day>1</day>
+				<month>11</month>
+				<year>2021</year>
+			</date>
+			<date>
+				<day>1</day>
+				<month>12</month>
+				<year>2021</year>
+			</date>
+			<daterange>
+				<no_of_day>1</no_of_day>
+				<no_of_months>1</no_of_months>
+				<no_of_years>0</no_of_years>
+			</daterange>
+		</dateranges>
+		<dateranges>
+			<date>
+				<day>1</day>
+				<month>10</month>
+				<year>2021</year>
+			</date>
+			<date>
+				<day>1</day>
+				<month>11</month>
+				<year>2021</year>
+			</date>
+			<daterange>
+				<no_of_day>1</no_of_day>
+				<no_of_months>1</no_of_months>
+				<no_of_years>0</no_of_years>
+			</daterange>
+		</dateranges>
+		<dateranges>
+			<date>
+				<day>1</day>
+				<month>3</month>
+				<year>2021</year>
+			</date>
+			<date>
+				<day>1</day>
+				<month>4</month>
+				<year>2021</year>
+			</date>
+			<daterange>
+				<no_of_day>1</no_of_day>
+				<no_of_months>1</no_of_months>
+				<no_of_years>0</no_of_years>
+			</daterange>
+		</dateranges>
+		<dateranges>
+			<date>
+				<day>1</day>
+				<month>12</month>
+				<year>2020</year>
+			</date>
+			<date>
+				<day>1</day>
+				<month>2</month>
+				<year>2021</year>
+			</date>
+			<daterange>
+				<no_of_day>1</no_of_day>
+				<no_of_months>2</no_of_months>
+				<no_of_years>0</no_of_years>
+			</daterange>
+		</dateranges>
+	</headerZone>
+	<headerZone>
+		<section>achievements</section>
+		<bullet></bullet>
+		<bullet>
+			<text>Speaker at ML/AI Event organized by the Google Developers Student Club, DEI (Dec 2021)</text>
+			<dates></dates>
+			<dates>
+				<month>12</month>
+				<year>2021</year>
+				<date_normalized>1:12:2021</date_normalized>
+				<text>Dec 2021</text>
+			</dates>
+		</bullet>
+		<bullet>
+			<text>Secured 3rd position in TECH-A-THON organized by The ECE Society, BIT Mesra, Ranchi (Oct 2021)</text>
+			<dates></dates>
+			<dates>
+				<month>10</month>
+				<year>2021</year>
+				<date_normalized>1:10:2021</date_normalized>
+				<text>Oct 2021</text>
+			</dates>
+		</bullet>
+		<bullet>
+			<text>Attended online KLA Workshop on AI and HPC in Semicon- ductor Manufacturing organized by! IIT Madras (Sept 2021)</text>
+			<dates></dates>
+			<dates>
+				<month>9</month>
+				<year>2021</year>
+				<date_normalized>1:9:2021</date_normalized>
+				<text>Sept 2021</text>
+			</dates>
+		</bullet>
+		<bullet>
+			<text>Won 1st prize in the online competition Game of Brands orga- nized by SGGSCC, University of Delhi (Mar 2021)</text>
+			<dates></dates>
+			<dates>
+				<month>3</month>
+				<year>2021</year>
+				<date_normalized>1:3:2021</date_normalized>
+				<text>Mar 2021</text>
+			</dates>
+		</bullet>
+	</headerZone>
+</resume>

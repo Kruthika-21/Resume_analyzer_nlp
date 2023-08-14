@@ -1,0 +1,592 @@
+###############################################
+# FILE: funcs
+# SUBJ: comment
+# AUTH: Kruthika
+# CREATED: 2023-6-9 20:21:38
+# MODIFIED:
+###############################################
+
+@DECL
+
+SetNumberAttr(L("node"),L("num")) {
+
+if(L("num")>=1 && L("num")<=12){
+pnmakevar(L("node"),"month",1);
+pnmakevar(L("node"),"day",1);
+}
+if(L("num")>12 && L("num")<=31){
+pnmakevar(L("node"),"day",1);
+}
+if(L("num")>=1900 && L("num")<=2030){
+    pnmakevar(L("node"),"year",1);
+}
+if(L("num")>=0 && L("num")<=99){
+    pnmakevar(L("node"),"year",1);
+}
+
+}
+Addheader(L("concept"),L("name")){
+   addstrval(L("concept"),"section",L("name"));
+   }
+AddName(L("concept"),L("name")){
+   addstrval(L("concept"),"name",L("name"));
+   }
+AddCompany(L("concept"),L("name")){
+   addstrval(L("concept"),"companies",L("name"));
+   }
+AddLink(L("concept"),L("name")){
+   addstrval(L("concept"),"links",L("name"));
+   }
+AddEmail(L("concept"),L("name")){
+   addstrval(L("concept"),"email",L("name"));
+   }
+   AddBullet(L("concept"),L("name")){
+   addstrval(L("concept"),"text",L("name"));
+   }
+AddTelephone(L("concept"),L("node")){
+    if(pnvar(L("node"),"type")){
+         L("str")=str(pnvar(L("node"),"type"));
+         addstrval(L("concept"),"type",L("str"));
+    }
+    if(pnvar(L("node"),"area")){
+        L("str")=str(pnvar(L("node"),"area"));
+         addstrval(L("concept"),"area",L("str"));
+    }
+    if(pnvar(L("node"),"prefix")){
+        L("str")=str(pnvar(L("node"),"prefix"));
+         addstrval(L("concept"),"prefix",L("str"));
+    }
+        if(pnvar(L("node"),"station")){
+        L("str")=str(pnvar(L("node"),"station"));
+         addstrval(L("concept"),"station",L("str"));
+    }
+    L("val")=str(pnvar(L("node"),"$text"));
+   addstrval(L("concept"),"text",L("val"));
+   }
+AddGrade(L("concept"),L("node")){
+    L("con1")=AddUniqueCon(L("concept"),"grade");
+    L("str")=str(pnvar(L("node"),"type"));
+    L("val")=str(pnvar(L("node"),"val"));
+    L("text")=str(pnvar(L("node"),"$text"));
+    if(pnvar(L("node"),"cgpa")){
+    L("num")=str(pnvar(L("node"),"cgpa"));}
+       if(L("num")){
+    addstrval(L("con1"),"num", L("num"));
+   }
+   addstrval(L("con1"),"text", L("text"));
+   addstrval(L("con1"),"type", L("str"));
+   addstrval(L("con1"),"val", L("val"));
+
+   }
+AddLanguages(L("concept"),L("name")){
+   addstrval(L("concept"),"language",L("name"));
+   }
+AddHobby(L("concept"),L("name")){
+   addstrval(L("concept"),"hobby",L("name"));
+   }
+AddSkills(L("concept"),L("name")){
+   addstrval(L("concept"),"text",L("name"));
+   }
+AddDates(L("concept"),L("name")){
+   addstrval(L("concept"),"dates",L("name"));
+   }
+   AddDatesnew(L("concept"),L("thenode")){
+    L("node") = str(pnvar(L("thenode"),"dateis"));
+    L("text")=  str(pnvar(L("thenode"),"$text"));
+    L("spl")=split(L("node"),":");
+        L("day0")=str(num(L("spl")[0]));
+        L("month01")=str(num(L("spl")[1]));
+        L("year0")=str(num(L("spl")[2]));
+        if(num(pnvar(L("thenode"),"datetype"))==7){
+            addstrval(L("concept"),"year",L("year0"));
+            }
+    else if(num(pnvar(L("thenode"),"datetype"))==6||num(pnvar(L("thenode"),"datetype"))==5||num(pnvar(L("thenode"),"datetype"))==4){
+         addstrval(L("concept"),"month",L("month01"));
+          addstrval(L("concept"),"year",L("year0"));
+    }
+    else if(num(pnvar(L("thenode"),"datetype"))==1||num(pnvar(L("thenode"),"datetype"))==3||num(pnvar(L("thenode"),"datetype"))==2){
+          addstrval(L("concept"),"day",L("day0"));
+          addstrval(L("concept"),"month",L("month01"));
+          addstrval(L("concept"),"year",L("year0"));}
+
+          addstrval(L("concept"),"date_normalized",L("node"));
+          addstrval(L("concept"),"text",L("text"));
+    }
+    AddDatesnewer(L("concept"),L("node")){
+    L("daterange")=pnvar(L("node"),"daterange");
+    L("date1")=pnvar(L("node"),"date1");
+    L("date2")=pnvar(L("node"),"date2");
+    L("spl")=split(L("date1"),":");
+        L("day0")=str(num(L("spl")[0]));
+        L("month01")=str(num(L("spl")[1]));
+        L("year0")=str(num(L("spl")[2]));
+        L("con1")=AddUniqueCon(L("concept"),"date1");
+        addstrval(L("con1"),"day",L("day0"));
+         addstrval(L("con1"),"month",L("month01"));
+          addstrval(L("con1"),"year",L("year0"));
+           L("spl")=split(L("date2"),":");
+        L("day1")=str(num(L("spl")[0]));
+        L("month11")=str(num(L("spl")[1]));
+        L("year1")=str(num(L("spl")[2]));
+        L("con2")=AddUniqueCon(L("concept"),"date2");
+        addstrval(L("con2"),"day",L("day1"));
+         addstrval(L("con2"),"month",L("month11"));
+          addstrval(L("con2"),"year",L("year1"));
+           L("spl")=split(L("daterange"),":");
+        L("day1")=str(num(L("spl")[0]));
+        L("month11")=str(num(L("spl")[1]));
+        L("year1")=str(num(L("spl")[2]));
+        L("con3")=AddUniqueCon(L("concept"),"daterange");
+        addstrval(L("con3"),"no_of_day",L("day1"));
+         addstrval(L("con3"),"no_of_months",L("month11"));
+          addstrval(L("con3"),"no_of_years",L("year1"));
+
+    }
+AddEducation(L("concept"),L("name")){
+   addstrval(L("concept"),"insitute",L("name"));
+   }
+AddPercentages(L("concept"),L("name")){
+   addstrval(L("concept"),"percentage",L("name"));
+   }
+AddPl(L("concept"),L("names")){
+    L("fin0")=L("concept");
+    L("name0")=pnprev(L("concept"));
+    while(L("name0"))
+    {
+        L("fin0")=L("name0");
+        L("name0")=pnprev(L("name0"));
+    }
+    L("parent")=pnup(L("fin0"));
+    L("name")=pnprev(L("parent"));
+    while(L("name"))
+    {
+        L("fin0")=L("name");
+        L("name")=pnprev(L("name"));
+    }
+    L("headerzone")=pnup(L("fin0"));
+   addstrval(pnvar(L("headerzone"),"con"),"proglangs",L("names"));
+   }
+AddCity(L("concept"),L("name")){
+   addstrval(L("concept"),"city",L("name"));
+   }
+CheckSchool(L("var")) {
+    L("node") = pnprev(L("var"));
+    while (L("node")) {
+    if(strisupper(pnvar(L("node"),"$text"))||pnvar(L("node"),"city")||strequalnocase(pnvar(L("node"),"$text"),"and"))
+    {
+        if(!pnvar(L("node"),"ispart")){
+       pnmakevar(L("node"),"ispart",1);}
+    }
+    if(strequal(pnvar(L("node"),"$text"),"."))
+    {
+        if((strisupper(pnvar(pnprev(L("node")),"$text"))&&strlength(pnvar(pnprev(L("node")),"$text"))==1)||num(pnvar(pnprev(L("node")),"isabbrev")==1)){
+        if(!pnvar(L("node"),"ispart")){
+        pnmakevar(L("node"),"ispart",1);}
+        if(!pnvar(pnprev(L("node")),"ispart")){
+        pnmakevar(pnprev(L("node")),"ispart",1);}
+        L("node")=pnprev(L("node"));
+    }
+    }
+    if(strequal(pnvar(L("node"),"$text"),"s"))
+    {
+        if(strequal(pnvar(pnprev(L("node")),"$text"),"'")){
+        if(!pnvar(L("node"),"ispart")){
+        pnmakevar(L("node"),"ispart",1);}
+        if(!pnvar(pnprev(L("node")),"ispart")){
+        pnmakevar(pnprev(L("node")),"ispart",1);}
+        L("node")=pnprev(L("node"));
+    }
+    }
+        L("node") = pnprev(L("node"));
+    }
+    L("node") = pnnext(L("var"));
+    while(L("node")){
+        if(strisupper(pnvar(L("node"),"$text"))||strisupper(pnvar(L("node"),"$text")))
+    {
+       if(!pnvar(L("node"),"ispart")){
+       pnmakevar(L("node"),"ispart",1);}
+    }
+    if(strequalnocase(pnvar(L("node"),"$text"),"of")||strequalnocase(pnvar(L("node"),"$text"),"and")||strequalnocase(pnvar(L("node"),"$text"),"for")){
+
+    if(strisupper(pnvar(pnnext(L("node")),"$text"))){
+        if(!pnvar(L("node"),"ispart")){
+        pnmakevar(L("node"),"ispart",1);}
+        if(!pnvar(pnnext(L("node")),"ispart")){
+        pnmakevar(pnnext(L("node")),"ispart",1);}
+        L("node") = pnnext(L("node"));
+    }
+    }
+     L("node") = pnnext(L("node"));
+}
+}
+CheckCity(L("var")){
+L("var2") = pnnext(L("var"));
+if(L("var2")&&pnvar(L("var2"),"hascity")&&!pnvar(L("var2"),"hasedu")){
+    L("child")=pndown(L("var2"));
+    while(L("child")){
+        if(pnvar(L("child"),"city")){
+            return pnvar(L("child"),"$text");
+        }
+        L("child") = pnnext(L("child"));
+    }
+    return 0;
+}
+}
+CalculateDifference(L("day0"),L("day1"),L("month01"),L("month11"),L("year0"),L("year1"))
+{
+if(num(L("month01"))==num(L("month11"))&&num(L("day0"))<=num(L("day1"))){
+     L("days")=num(L("day1"))-num(L("day0"));
+}
+else{
+    L("days")=31-num(L("day0"))+num(L("day1"));
+}
+if(num(L("month01"))!=num(L("month11"))){
+    L("months")=(12-1-num(L("month01"))+num(L("month11")))*30;
+    }
+    else if (num(L("month01"))==num(L("month11"))) {
+      L("months")=(12-num(L("month01"))+num(L("month11")))*30;  
+    }
+    if(num(L("year0"))==num(L("year1"))){
+        if(num(L("month11"))!=num(L("month01"))){
+         L("months")=(num(L("month11"))-num(L("month01"))-1)*30; 
+        }
+        else
+        L("months")= num(L("month11"))-num(L("month01"));
+    L("years")=num(0);}
+    else if(num(L("year1"))>num(L("year0"))){
+        L("years")=(num(L("year1"))-num(L("year0"))-1)*365;
+    }
+    L("sum")=L("days")+L("months")+L("years");
+    "THE Days.txt" << str(L("days"))+":"+str(L("months"))+":"+str(L("years"))+":"+ str(L("sum"))<< "\n";
+        L("noy")=num(0);
+    L("nom")=num(0);
+    L("nod")=num(0);
+    while(num(L("sum"))>365)
+    {
+        L("sum")=num(L("sum"))-365;
+        L("noy")=num(L("noy"))+1;
+    }
+    while(num(L("sum"))>=30)
+    {
+        L("sum")=num(L("sum"))-30;
+        L("nom")=num(L("nom"))+1;
+    }
+    L("nod")=num(L("sum"));
+    L("date")=str(L("nod"))+":"+str(L("nom"))+":"+str(L("noy"));
+    return L("date");
+
+}
+CheckDateRange(L("date1"),L("date2"),L("present"),L("check"))
+{
+
+        L("spl")=split(L("date1"),":");
+        L("day0")=num(L("spl")[0]);
+        L("month01")=num(L("spl")[1]);
+        L("year0")=num(L("spl")[2]);
+       if(L("check")==0)
+       { L("spl")=split(L("date2"),":");
+       }
+       else{
+    L("spl")=split(L("present"),":");
+       }
+        L("day1")=num(L("spl")[0]);
+        L("month11")=num(L("spl")[1]);
+        L("year1")=num(L("spl")[2]);
+
+    L("date")= CalculateDifference(L("day0"),L("day1"),L("month01"),L("month11"),L("year0"),L("year1"));
+    return L("date");
+}
+
+# XMLOut(L("out")){
+#      L("out") << "<resume>\n";
+#      L("con") = down(G("headerZone"));
+#      L("out") << "\t<"<<conceptname(L("con"))<<">" <<"\n";
+#      while(L("con"))
+#      {
+#         L("con2") = down(L("con"));
+#         while(L("con2"))
+#         {
+#             L("out") << "\t\t<"<<conceptname(L("con2"))<<">" <<"\n";
+#             L("con3") = down(L("con2"));
+#             while(L("con3"))
+#             {
+#             L("out") << "\t\t\t<"<<conceptname(L("con3"))<<">" <<"\n";
+#             L("con4") = down(L("con3"));
+#             while(L("con4"))
+#             {
+#             L("out") << "\t\t\t\t<"<<conceptname(L("con4"))<<">" <<"\n"; 
+#             L("out") << "\t\t\t\t</"<<conceptname(L("con4"))<<">" <<"\n";
+#             L("con4")= next(L("con4"));
+#             }
+#             L("out") << "\t\t\t</"<<conceptname(L("con3"))<<">" <<"\n";
+#             L("con3")= next(L("con3"));
+#             }
+
+#             L("out") << "\t\t</"<<conceptname(L("con2"))<<">" <<"\n";
+#             L("con2")= next(L("con2"));              
+#           }
+#            L("out") << "\t</"<<conceptname(L("con"))<<">" <<"\n";
+#            L("con") = next(L("con"));
+       
+# }
+
+# }
+CheckNumber(L("con")){
+    if(!strisalpha(L("con")))
+    {
+       return strpiece(str(L("con")),0,strlength(str(L("con")))-2);
+    }
+    return str(L("con"));
+}
+
+# XMLOut(L("out")){
+#      L("out") << "<resume>\n";
+#      L("con") = down(G("headerZone"));
+#      L("out") << "\t<"<<CheckNumber(conceptname(L("con")))<<">" <<"\n";
+#      while(L("con"))
+#      {
+#         L("con2") = down(L("con"));
+#         while(L("con2"))
+#         {
+#             L("out") << "\t\t<"<<CheckNumber(conceptname(L("con2")))<<">" <<"\n";
+#             L("con3") = down(L("con2"));
+#             while(L("con3"))
+#             {
+#             L("out") << "\t\t\t<"<<CheckNumber(conceptname(L("con3")))<<">" <<"\n";
+#             L("con4") = down(L("con3"));
+#             while(L("con4"))
+#             {
+#             L("out") << "\t\t\t\t<"<<CheckNumber(conceptname(L("con4")))<<">" <<"\n"; 
+#             L("out") << "\t\t\t\t</"<<CheckNumber(conceptname(L("con4")))<<">" <<"\n";
+#             L("con4")= next(L("con4"));
+#             }
+#             L("out") << "\t\t\t</"<<CheckNumber(conceptname(L("con3")))<<">" <<"\n";
+#             L("con3")= next(L("con3"));
+#             }
+
+#             L("out") << "\t\t</"<<CheckNumber(conceptname(L("con2")))<<">" <<"\n";
+#             L("con2")= next(L("con2"));              
+#           }
+#            L("out") << "\t</"<<CheckNumber(conceptname(L("con")))<<">" <<"\n";
+#            L("con") = next(L("con"));
+       
+# }
+# }
+
+# XMLOut(L("out")){
+#      L("out") << "<resume>\n";
+#      L("con") = down(G("headerZone"));
+#      L("out") << "\t<"<<conceptname(L("con"))<<">" <<"\n";
+#      L("count")=0;
+#      while(L("con"))
+#      {  L("count")=1;
+#         PutAttributes(L("con"),L("out"),L("count"));
+#         L("con2") = down(L("con"));
+#         while(L("con2"))
+#         {
+#             L("count")=1;
+#             L("count")++;
+#             L("out") << "\t\t<"<<conceptname(L("con2"))<<">" <<"\n";
+#             PutAttributes(L("con2"),L("out"),L("count"));
+#             L("con3") = down(L("con2"));
+#             while(L("con3"))
+#             {
+#                 L("count")=2;
+#                 L("count")++;
+#             L("out") << "\t\t\t<"<<conceptname(L("con3"))<<">" <<"\n";
+#             PutAttributes(L("con3"),L("out"),L("count"));
+#             L("con4") = down(L("con3"));
+#             while(L("con4"))
+#             {
+#                 L("count")=3;
+#                 L("count")++;
+#             L("out") << "\t\t\t\t<"<<conceptname(L("con4"))<<">" <<"\n"; 
+#             PutAttributes(L("con4"),L("out"),L("count"));
+#             L("out") << "\t\t\t\t</"<<conceptname(L("con4"))<<">" <<"\n";
+#             L("con4")= next(L("con4"));
+#             }
+#             L("out") << "\t\t\t</"<<conceptname(L("con3"))<<">" <<"\n";
+#             L("con3")= next(L("con3"));
+#             }
+
+#             L("out") << "\t\t</"<<conceptname(L("con2"))<<">" <<"\n";
+#             L("con2")= next(L("con2"));              
+#           }
+#            L("out") << "\t</"<<conceptname(L("con"))<<">" <<"\n";
+#            L("con") = next(L("con"));
+       
+# }
+# }
+# PutAttributes(L("con"),L("out"),L("count")){
+#     G("attrList") = findattrs(L("con"));
+#     if(num(L("count"))==0)
+#     {
+#         L("len") ="\t";
+#     }
+#     else if(num(L("count"))==1)
+#     {
+#         L("len") ="\t\t";
+#     }
+#     else if(num(L("count"))==2)
+#     {
+#         L("len") ="\t\t\t";
+#     }
+#     else if(num(L("count"))==3)
+#     {
+#         L("len") ="\t\t\t\t";
+#     }
+#     else if(num(L("count"))==4)
+#     {
+#         L("len") ="\t\t\t\t\t";
+#     }
+#         while (G("attrList")) {
+#             G("attrName") = attrname(G("attrList"));
+#             L("out") <<L("len")<<"<"<<G("attrName")<<">";
+#             G("valList") = attrvals(G("attrList"));
+#             G("valName") = getstrval(G("valList"));
+#             L("countin")=0;
+#             while (G("valList")) {
+#                 L("countin")++;
+#                 G("valList") = nextval(G("valList"));
+#             }
+#             G("valList") = attrvals(G("attrList"));
+#             if(L("countin")>1){
+#                 L("out") << "\n";
+#                 L("in")=1;
+#                 while (G("valList")) {
+#                 if(getstrval(G("valList"))){
+#                     L("out") <<L("len")<<"\t"<<"<"<<str(L("in"))<<">";
+
+#                 L("out") <<getstrval(G("valList"));
+#                 L("out") << "</"<<str(L("in")++)<<">";
+#                  L("out") << "\n";
+#                 }
+#                 G("valList") = nextval(G("valList"));
+#             }
+#             L("out")<<L("len")<<"</"<<G("attrName")<<">" <<"\n";
+#             }
+#             else {
+#             while (G("valList")) {
+#                 if(getstrval(G("valList"))){
+
+#                 L("out") <<getstrval(G("valList"));
+#                 }
+#                 G("valList") = nextval(G("valList"));
+#             }
+#             L("out")<< "</"<<G("attrName")<<">" <<"\n";
+#             }
+            
+#             G("attrList") = nextattr(G("attrList"));
+#         }
+# }
+
+#----------------------------------------------------------------------
+XMLOut(L("out")){
+     L("out") << "<resume>\n";
+     L("con") = down(G("headerZone"));
+    #  L("out") << "\t<"<<conceptname(L("con"))<<">" <<"\n";
+     L("count")=0;
+     while(L("con"))
+     {  L("out") << "\t<"<<CheckNumber(conceptname(L("con")))<<">" <<"\n";
+        L("count")=1;
+        PutAttributes(L("con"),L("out"),L("count"));
+        L("con2") = down(L("con"));
+        while(L("con2"))
+        {
+            L("count")=1;
+            L("count")++;
+            L("out") << "\t\t<"<<CheckNumber(conceptname(L("con2")))<<">" <<"\n";
+            PutAttributes(L("con2"),L("out"),L("count"));
+            L("con3") = down(L("con2"));
+            while(L("con3"))
+            {
+                L("count")=2;
+                L("count")++;
+            L("out") << "\t\t\t<"<<CheckNumber(conceptname(L("con3")))<<">" <<"\n";
+            PutAttributes(L("con3"),L("out"),L("count"));
+            L("con4") = down(L("con3"));
+            while(L("con4"))
+            {
+                L("count")=3;
+                L("count")++;
+            L("out") << "\t\t\t\t<"<<CheckNumber(conceptname(L("con4")))<<">" <<"\n"; 
+            PutAttributes(L("con4"),L("out"),L("count"));
+            L("out") << "\t\t\t\t</"<<CheckNumber(conceptname(L("con4")))<<">" <<"\n";
+            L("con4")= next(L("con4"));
+            }
+            L("out") << "\t\t\t</"<<CheckNumber(conceptname(L("con3")))<<">" <<"\n";
+            L("con3")= next(L("con3"));
+            }
+
+            L("out") << "\t\t</"<<CheckNumber(conceptname(L("con2")))<<">" <<"\n";
+            L("con2")= next(L("con2"));              
+          }
+           L("out") << "\t</"<<CheckNumber(conceptname(L("con")))<<">" <<"\n";
+           L("con") = next(L("con"));
+       
+}
+ L("out") << "</resume>\n";
+}
+PutAttributes(L("con"),L("out"),L("count")){
+    G("attrList") = findattrs(L("con"));
+    if(num(L("count"))==0)
+    {
+        L("len") ="\t";
+    }
+    else if(num(L("count"))==1)
+    {
+        L("len") ="\t\t";
+    }
+    else if(num(L("count"))==2)
+    {
+        L("len") ="\t\t\t";
+    }
+    else if(num(L("count"))==3)
+    {
+        L("len") ="\t\t\t\t";
+    }
+    else if(num(L("count"))==4)
+    {
+        L("len") ="\t\t\t\t\t";
+    }
+        while (G("attrList")) {
+            G("attrName") = attrname(G("attrList"));
+            L("out") <<L("len")<<"<"<<G("attrName")<<">";
+            G("valList") = attrvals(G("attrList"));
+            G("valName") = getstrval(G("valList"));
+            L("countin")=0;
+            while (G("valList")) {
+                L("countin")++;
+                G("valList") = nextval(G("valList"));
+            }
+            G("valList") = attrvals(G("attrList"));
+            if(L("countin")>1){
+                L("out") << "\n";
+                L("in")=1;
+                while (G("valList")) {
+                if(getstrval(G("valList"))){
+                    L("out") <<L("len")<<"\t"<<"<"<<strpiece(str(G("attrName")),0,strlength(str(G("attrName")))-2)<<">";
+
+                L("out") <<getstrval(G("valList"));
+                L("out") << "</"<<strpiece(str(G("attrName")),0,strlength(str(G("attrName")))-2)<<">";
+                 L("out") << "\n";
+                }
+                G("valList") = nextval(G("valList"));
+            }
+            L("out")<<L("len")<<"</"<<G("attrName")<<">" <<"\n";
+            }
+            else {
+            while (G("valList")) {
+                if(getstrval(G("valList"))){
+
+                L("out") <<getstrval(G("valList"));
+                }
+                G("valList") = nextval(G("valList"));
+            }
+            L("out")<< "</"<<G("attrName")<<">" <<"\n";
+            }
+            
+            G("attrList") = nextattr(G("attrList"));
+        }
+}
+@@DECL

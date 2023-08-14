@@ -1,0 +1,18 @@
+###############################################
+# FILE: gathering2
+# SUBJ: comment
+# AUTH: Kruthika
+# CREATED: 2023-6-13 13:42:30
+# MODIFIED:
+###############################################
+
+@PATH _ROOT _headerZone
+
+@POST
+S("con2") =  MakeCountCon(X("con",2),"prose");
+single();
+@RULES
+_prose <-
+	_LINE
+	_follow	### (1)
+	@@

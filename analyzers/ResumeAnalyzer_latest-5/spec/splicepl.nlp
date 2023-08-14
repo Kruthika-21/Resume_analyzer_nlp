@@ -1,0 +1,17 @@
+###############################################
+# FILE: splicepl
+# SUBJ: comment
+# AUTH: Kruthika
+# CREATED: 2023-7-18 0:26:4
+# MODIFIED:
+###############################################
+
+@PATH _ROOT _LINE _pl
+
+@POST
+splice(1,1);
+
+@RULES
+_pl <-
+	_pl	### (1)
+	@@

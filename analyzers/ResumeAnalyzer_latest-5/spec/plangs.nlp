@@ -1,0 +1,15 @@
+###############################################
+# FILE: plangs
+# SUBJ: comment
+# AUTH: Kruthika
+# CREATED: 2023-6-21 22:5:23
+# MODIFIED:
+###############################################
+
+@MULTI _pl
+@POST
+AddPl(pnup(N(1)),N("$text",1));
+@RULES
+_xNIL <-
+	_xWILD [fail = _xEND]	### (1)
+	@@

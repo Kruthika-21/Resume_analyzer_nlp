@@ -1,0 +1,105 @@
+VAROON MARION
+Student, Computer Science and Engineering, UVCE 
+Curious and ever ready to learn new skills and technologies. Experienced Junior Researcher with a
+demonstrated history of learning new skills in the IT industry. Skilled in Java, Python, C, C++,Machine-
+Learning, Deep-Learning, Quantum computing and Azure cloud. Problem solver, working towards a
+Bachelor's degree focused in Computer Science from RV College Of Engineering. 
+varoonm17@gmail.com 
+1214365335 
+Bangalore 
+linkedin.com/in/varoon-marion-a59a8621a 
+EDUCATION 
+B.E. in Computer Science and Engineering 
+Visvesvaraya College of Engineering
+10/2020 - Present,  
+Bangalore, CGPA - 9.71  
+CBSE 12th 
+National Public School, HSR 
+05/2018 - 05/2020,  
+Bangalore, 97.2% 
+Physics 
+Chemistry 
+Mathematics 
+Computer Science 
+WORK EXPERIENCE  
+NMCAD Lab,Indian Institute of Science (IISc) 
+08/2022 - Present,  
+Bangalore 
+Work with the strategic consulting teams of the eVTOL
+project in creating IT solutions in the aerospace industry. 
+To create machine learning and deep learning models for
+optimization of eVTOL components. 
+Assist the professors of IISc NMCAD lab and other reputed
+institutes such as IIM-C in their research and development
+work of this project. 
+Machine Learning Intern 
+L&T Technological Services (LTTS) 
+02/2022 - 03/2022,  
+Bangalore 
+Developed multiple deep learning models for classiﬁcation
+of medical X-Rays on basis on anatomy of the human body. 
+Worked with the prominent medical imaging datasets such
+as CheXpert and MURA. 
+Used the PyTorch framework, DenseNet and ResNet models
+to develop the ML model during the internship. 
+Created a complete deep learning model using ResNet and
+progressive image resizing that scored an evaluation metric
+of 97% . 
+Obtained approval from Technical Project Leader and letter
+of recommendation from LTTS. 
+SKILLS 
+OOPs 
+Java 
+C++ 
+Python 
+C 
+Machine Learning 
+Deep Learning 
+Computer Vision 
+DevOps 
+Cloud 
+Qiskit 
+Containers 
+Azure 
+Operating Systems 
+Linear Algebra 
+Data Structures and
+Algorithms 
+OOPs with Java 
+Computer Networks 
+Computer Systems Design 
+Discrete Mathematics 
+Embedded Systems
+PROJECTS 
+Chatbot Integration with Patient Record Management
+Software (RV Dental College) (08/2022 - Present) 
+Create a chatbot using RASA and Microsoft Azure Bot Framework. 
+Develop Patient Record Management software using open source
+software and integrate it with natural language processing. 
+DevOps project with ABB (11/2021 - 02/2022) 
+Introduction to DevOps, pipeline of developing and deploying
+applications, with security and authentication using Microsoft
+Azure and Kubernetes. 
+Researched on multiple security measures such as VPNs and Azure
+Directories to choose the best option in the transmission of
+sensitive data from remote Edge Devices to Regional Cloud (AKS
+cluster). 
+Obtained approval from mentors and Global Technology Leader. 
+CERTIFICATES & PUBLICATIONS 
+Qiskit Global Summer School 2022 - Quantum
+Excellence 
+Research publication on "Smart Parking Guidance
+System" in International Journal Of
+Engineering Research & Technology (IJERT)
+ (2022) 
+ACHIEVEMENTS 
+Winner of IISc's Pravega MELAS Quiz (2022) 
+Achieved the ﬁrst prize with a cash award of Rs. 4000. 
+Winner of the Times NIE Student of the Year Award:
+School Topper Class X Board Exam (2017 - 2018) 
+Won an award worth Rs. 5000. 
+INTERESTS 
+Basketball 
+Quizzing 
+Reading 
+Sports 

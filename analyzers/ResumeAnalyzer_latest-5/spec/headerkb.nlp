@@ -1,0 +1,51 @@
+###############################################
+# FILE: headerkb
+# SUBJ: comment
+# AUTH: Kruthika
+# CREATED: 2023-6-29 6:53:55
+# MODIFIED:
+###############################################
+
+@PATH _ROOT _headerZone
+@POST
+Addheader(X("con",2),X("header",2));
+# "output.txt" << "con: " << X("header",2) << "\n";
+
+@RULES
+_xNIL <-
+	_header	### (1)
+	@@
+
+
+@POST
+Addheader(X("con",2),X("header",2));
+# "output.txt" << "con: " << X("header",2) << "\n";
+@RULES
+_xNIL <-
+	_xSTART
+	_LINE	### (1)
+	@@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,57 @@
+ARUN JINDAL
+arunjindal@gmail.com
+9483127701
+
+Experience
+Company: Rolwandi
+Role: Project Intern
+Jun 2022 - Aug 2022
+To detect parts of a Saree: Body, Border, Aanchal and to
+change colors of each individually recognised parts
+A deep Learning framework was developed to identify the various parts of the and be able 
+to change its colors.
+A web application was developed  to provide friendly interface to interact with various color 
+combinations for the different parts allowing to try designs effortlessly.
+A combination of Image processing and deep learning techniques along with flask, python, html 
+and css  was used in the application.
+Certificate of completion - bit.ly/3CqhUVI
+
+Education
+REVA University, Bangalore
+B.E. in Computer Science
+9.63 CGPA
+2020 - present
+
+Base Pu College, Bangalore
+Karnataka state Pre-university board
+92.67%
+2020
+
+Vidyaniketan Public School, Bangalore
+CBSE Board
+90.80%
+2018
+
+
+Projects
+Design of a Smart Time Switch
+A prototype was implemented on the LPC2148 microcontroller using assembly C. It integrates RTC for 
+the timer start time and duration. It provides an interface to interact with the microcontroller using a 
+set of switches and a LCD.
+
+Lazy Memory Allocation in XV6
+Modified the XV6 kernel to support lazy allocation of pages and implemented additional system calls 
+to display number of physical and virtual pages for a given process.
+
+Visual Representation of Dijkstra's Algorithm
+Implemented in the form of a Web Interface using HTML, CSS and JS. Provides a way graphical 
+interface to modify the graph and shows the shortest path between a pair of vertices along the steps 
+taken to achieve it.
+
+Skills
+C
+C++
+Python
+Java
+Image processing
+Machine Learning

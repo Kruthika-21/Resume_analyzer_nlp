@@ -1,0 +1,22 @@
+headerZone
+  headerZone1: 
+    section=introduction
+  headerZone2: 
+    section=achievements
+  headerZone3: 
+    section=internships
+  headerZone4: 
+    section="educational background"
+  headerZone5: 
+    section="academic projects"
+  headerZone6: 
+    section="co-curricular activities"
+  headerZone7: 
+    section="more information"
+  headerZone8: 
+    section="technical skills"
+  headerZone9: 
+    section=languages
+  headerZone10: 
+    section=interests
+

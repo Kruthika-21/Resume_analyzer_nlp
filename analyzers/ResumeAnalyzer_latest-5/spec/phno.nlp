@@ -1,0 +1,34 @@
+###############################################
+# FILE: phno
+# SUBJ: comment
+# AUTH: Kruthika
+# CREATED: 2023-6-3 12:27:58
+# MODIFIED:
+###############################################
+
+@PATH _ROOT _LINE
+
+@POST
+L("string")=N("$text",1);
+L("lenn")=strlength(N("$text",1));
+L("lenn2")=0;
+L("count2")=0;
+while(L("lenn2")<=L("lenn"))
+	{
+	if(strisdigit(strpiece(L("string"),L("lenn2"),L("lenn2")))){
+	L("count2")++;
+	}
+	L("lenn2")++;
+	}
+if((L("count2")>=10&&L("count2")<=13)||L("count2")==7)
+	{
+	"Resume Output.txt"<<"Phone Number: "<<L("string")<<"\n";
+	single();
+	}
+
+@RULES
+_xnin <-
+	_xWILD [match=(_xNUM  \- \+ \( \) _xWHITE )] 
+	_xWILD [match=(\n \, )]
+@@
+

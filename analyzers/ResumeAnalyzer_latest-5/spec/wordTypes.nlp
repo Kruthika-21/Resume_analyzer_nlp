@@ -1,0 +1,39 @@
+###############################################
+# FILE: wordTypes
+# SUBJ: comment
+# AUTH: David de Hilster
+# CREATED: 2023-2-2 10:8:9
+# MODIFIED:
+###############################################
+
+@NODES _LINE
+
+@POST
+	X("words") = X("words") + 1;
+	if (strlength(N("$text")) > 1) {
+		if (striscaps(N("$text"))) {
+			X("caps") = X("caps") + 1;
+		}
+		else if (strisupper(N("$text"))) {
+			X("upper") = X("upper") + 1;
+		}		
+	}
+	if (N("common") || (N("lower") && spellword(N("$text")))) {
+		X("iprose")++;
+	}
+	if (pnvar(N(1),"wheader")){
+		X("isheader")++;
+	}
+
+@RULES
+_xNIL <-
+	_xWILD [one match=(_xALPHA _city _edu _pl)]	### (1)
+	@@
+## For the words in the line keep adding the count
+## If the string length is > 1 it is a word 
+## then check if it starts with a capital letter
+## Increment the count of caps letters
+## Then check if the full word itself if a uppercase and increment count
+## now if the word is a lower case / common word and known english
+## prose is incremented 
+## IMP!! If 

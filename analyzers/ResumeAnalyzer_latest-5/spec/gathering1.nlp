@@ -1,0 +1,20 @@
+###############################################
+# FILE: gathering1
+# SUBJ: comment
+# AUTH: Kruthika
+# CREATED: 2023-6-13 20:41:21
+# MODIFIED:
+###############################################
+
+@PATH _ROOT _headerZone
+
+@PRE
+<2,2> var("prose");
+@POST
+splice(2,2);
+single();
+@RULES
+_follow <-
+	_LINE
+	_xWILD[plus match=(_LINE)]	### (1)
+	@@

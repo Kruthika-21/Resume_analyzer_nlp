@@ -1,0 +1,37 @@
+###############################################
+# FILE: bracket1
+# SUBJ: comment
+# AUTH: Kruthika
+# CREATED: 2023-6-13 19:7:48
+# MODIFIED:
+###############################################
+
+@PATH _ROOT _headerZone _LINE
+@CHECK
+if(N("open",1)==N("open",3))
+{
+	succeed();
+}
+else{
+fail();
+}
+@RULES
+_complete <-
+	_opens					### (1)
+	_xWILD [fail=_close]	### (2)
+	_close					### (3)
+	@@
+@CHECK
+if(N("open",1)==N("open",3))
+{
+	succeed();
+}
+else{
+fail();
+}
+@RULES
+_complete <-
+	_open					### (1)
+	_xWILD [fail=_open]	### (2)
+	_open					### (3)
+	@@

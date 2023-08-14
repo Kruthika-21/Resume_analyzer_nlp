@@ -1,0 +1,24 @@
+###############################################
+# FILE: bullets5
+# SUBJ: comment
+# AUTH: Kruthika
+# CREATED: 2023-7-17 18:30:44
+# MODIFIED:
+###############################################
+
+@PATH _ROOT _headerZone _prose
+@CHECK
+L("header") = num(X("isbullet",3));
+if(L("header")==1)
+{
+	succeed();	
+}
+else
+fail();
+@POST
+X("text",3)=N("$text",1);
+@RULES
+_xNIL <-
+	_xWILD [fail= _xEND]	
+	_xEND### (2)
+	@@

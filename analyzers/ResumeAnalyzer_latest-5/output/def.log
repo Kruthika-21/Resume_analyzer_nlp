@@ -1,0 +1,47 @@
+Sequence file is:
+dicttok
+NOHASH rule: _LINE [] [] <- _xWILD [0,0 fails=( 
+)] [] _xWILD [1,1 matches=(
+ _xEND)] [] @@
+NOHASH rule: _xNIL [] [] <- _xNUM [1,1] [] @@
+NOHASH rule: _compind [] [] <- _xALPHA [1,1 pre] [] . [1,1] [] @@
+NOHASH rule: _link [] [] <- _xWILD [1,1 matches=(_xSTART _xWHITE)] [] _xWILD [1,0 matches=(_xALPHA _xNUM / @ . - _ $ + ! * ' ( )) hmatch] [] _domain [1,1] [] _xWILD [0,0 matches=(_xALPHA _xNUM / @ . - _ $ + ! * ' ( )) hmatch] [] _xWILD [0,0 fails=(_xWHITE 
+ )] [] @@
+NOHASH rule: _email [] [] <- _xWILD [1,1 matches=(_xSTART _xWHITE)] [] _xWILD [1,0 matches=(_xALPHA _xNUM / . - _ $ * ' ( )) hmatch] [] @ [1,1] [] _xWILD [1,1 matches=(_xALPHA)] [] _domain [1,1] [] _xWILD [0,1 matches=(_domain)] [] @@
+NOHASH rule: _telephone [] [] <- _xWILD [0,0 matches=(+ - 1 91 ()] [] _xNUM [1,1 pre] [] _xWILD [0,0 matches=() . -)] [] _xNUM [1,1 pre] [] @@
+NOHASH rule: _telephone [] [] <- _xWILD [0,0 matches=(+ - 1 ()] [] _xNUM [1,1 pre] [] _xWILD [0,0 matches=() . -)] [] _xNUM [1,1 pre] [] _xWILD [0,0 matches=(. -)] [] _xNUM [1,1 pre] [] @@
+NOHASH rule: _telephone [] [] <- + [0,1] [] _xNUM [1,1] [] @@
+NOHASH rule: _date [] [] <-3- _xNUM [1,1] [] _xWILD [0,1 matches=(_xWHITE - /)] [] _xALPHA [1,1 trigger pre] [] , [0,1] [] _xWILD [0,1 matches=(_xWHITE -)] [] _xNUM [1,1] [] @@
+NOHASH rule: _date [] [] <- _xALPHA [1,1 pre] [] _xWILD [0,1 matches=(_xWHITE - /)] [] _xNUM [1,1] [] _xWILD [1,1 matches=(_xNIL ,)] [] _xWILD [0,1 matches=(_xWHITE -)] [] _xNUM [1,1] [] @@
+NOHASH rule: _date [] [] <-7- _xNUM [1,1] [] _xWILD [0,1 matches=(- / _xWHITE .)] [] _xWILD [0,0 matches=(_xWHITE)] [] _xNUM [1,1] [] _xWILD [0,1 matches=(- / _xWHITE .)] [] _xWILD [0,0 matches=(_xWHITE)] [] _xNUM [1,1 trigger] [] @@
+NOHASH rule: _xNIL [] [] <- _xWILD [1,1 matches=(_xALPHA _city _edu _pl)] [] @@
+NOHASH rule: _headerZone [] [] <- _xSTART [1,1] [] _xWILD [0,0 fails=(_header _xEND)] [] @@
+NOHASH rule: _xNIL [] [] <- _xSTART [1,1] [] _LINE [1,1] [] @@
+NOHASH rule: _xNIL [] [] <- _xWHITE [1,1 singlet] [] @@
+NOHASH rule: _percentage [] [] <- _xNUM [1,1] [] . [1,1] [] _xNUM [1,1] [] _percent [1,1] [] @@
+NOHASH rule: _percentage [] [] <- _xNUM [1,1] [] _percent [1,1] [] @@
+NOHASH rule: _percentage [] [] <- _xNUM [1,1] [] . [0,1] [] _xNUM [0,1] [] _xWILD [1,1 matches=(cgpa sgpa gpa)] [] @@
+NOHASH rule: _xNIL [] [] <- _xSTART [1,1] [] _LINE [1,1] [] @@
+NOHASH rule: _compind [] [] <- _xALPHA [1,1 pre] [] @@
+NOHASH rule: _company [] [] <- _xWILD [1,0 matches=(_xCAP & - @ _xNUM)] [] _compind [1,1] [] @@
+NOHASH rule: _xNIL [] [] <- _xSTART [1,1] [] _xWILD [1,1 pre matches=(_xCTRL _xPUNCT ●) fails=(( ))] [] @@
+NOHASH rule: _xNIL [] [] <- _xSTART [1,1] [] _xWILD [1,1 matches=(_xCTRL _xPUNCT ●)] [] @@
+NOHASH rule: _xNIL [] [] <- _xWILD [0,0 fails=(_xEND)] [] _xEND [1,1] [] @@
+NOHASH rule: _xNIL [] [] <- _xALPHA [1,1 pre] [] _xEND [1,1] [] @@
+NOHASH rule: _xNIL [] [] <- _xSTART [1,1] [] _xALPHA [1,1 singlet] [] @@
+NOHASH rule: _xNIL [] [] <- _xWILD [0,0 fails=(_xEND)] [] @@
+NOHASH rule: _date [] [] <-3- _xNUM [1,1 pre] [] _xWILD [0,1 matches=(- / ,)] [] _xALPHA [1,1 trigger pre] [] @@
+NOHASH rule: _date [] [] <- _xALPHA [1,1 pre] [] _xWILD [0,1 matches=(- / ,)] [] _xNUM [1,1 pre] [] @@
+NOHASH rule: _date [] [] <-3- _xNUM [1,1] [] _xWILD [1,1 matches=(- /)] [] _xNUM [1,1 trigger] [] @@
+NOHASH rule: _year [] [] <- _xNUM [1,1 pre] [] @@
+NOHASH rule: _date [] [] <-3- _xNUM [1,1 pre] [] _xWILD [0,1 matches=(- / ,)] [] _xALPHA [1,1 trigger pre] [] @@
+NOHASH rule: _date [] [] <- _xALPHA [1,1 pre] [] _xWILD [0,1 matches=(- / ,)] [] _xNUM [1,1 pre] [] @@
+NOHASH rule: _date [] [] <-3- _xNUM [1,1] [] _xWILD [1,1 matches=(- /)] [] _xNUM [1,1 trigger] [] @@
+NOHASH rule: _year [] [] <- _xNUM [1,1 pre] [] @@
+NOHASH rule: _eduname [] [] <- _xWILD [1,0 pre matches=(_xALPHA . ' _city)] [] _edu [1,1] [] _xWILD [1,0 pre matches=(_xALPHA)] [] @@
+NOHASH rule: _eduname [] [] <- _xWILD [1,0 pre matches=(_xALPHA . ' _city)] [] _edu [1,1] [] @@
+NOHASH rule: _xNIL [] [] <- _xSTART [1,1] [] _header [1,1] [] @@
+NOHASH rule: _xNIL [] [] <- _xWILD [0,0 fails=(_xEND)] [] @@
+
+Passes: (dicttok,nil) (nlp,kbinit) (nlp,KBFuncs) (nlp,funcs) (nlp,Lines) (nlp,removeblankline) (nlp,numberattr) (nlp,splicepl) (nlp,Links) (nlp,comps) (nlp,Links2) (nlp,Links3) (nlp,Links4) (nlp,email) (nlp,phno_d) (nlp,newdates1) (nlp,newdates2) (nlp,wordTypes) (nlp,headers) (nlp,headerZone) (nlp,headerkb) (nlp,kbdisplay01) (nlp,RemoveWhiteSpace) (nlp,Abbrevs) (nlp,percentage1) (nlp,percentage2) (nlp,cgpa) (nlp,addgrade) (nlp,name) (nlp,kbdisp02) (nlp,sentend) (nlp,companies) (nlp,companies2) (nlp,bullets) (nlp,bullets2) (nlp,bullets3) (nlp,bullets4) (nlp,bullets5) (nlp,bracket1) (nlp,bracket2) (nlp,bracket_3) (nlp,bracket_4) (nlp,bracket6) (nlp,bracket5) (nlp,bracket7) (nlp,brackets) (nlp,begining) (nlp,gathering) (nlp,beginning2) (nlp,gathering1) (nlp,gathering2) (nlp,gathering3) (nlp,linksphno) (nlp,linksphno2) (nlp,insertbullet) (nlp,newdates3) (nlp,newdates4) (nlp,newdates5) (nlp,adddate1) (nlp,dates4) (nlp,newdates13) (nlp,newdates14) (nlp,newdates15) (nlp,adddates2) (nlp,dates5) (nlp,cities) (nlp,education) (nlp,education2) (nlp,education3) (nlp,kbdisp03) (nlp,header) (nlp,Skills1) (nlp,Languages) (nlp,plangs) (nlp,Hobbies) (nlp,kbdisplay04) (nlp,output) 
+

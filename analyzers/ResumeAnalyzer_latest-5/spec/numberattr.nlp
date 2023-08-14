@@ -1,0 +1,36 @@
+###############################################
+# FILE: numberattr
+# SUBJ: comment
+# AUTH: Kruthika
+# CREATED: 2023-6-10 6:18:46
+# MODIFIED:
+###############################################
+
+@PATH _ROOT _LINE
+
+@POST
+SetNumberAttr(N(1),num(N("$text",1)));
+@RULES
+_xNIL <-
+	_xNUM	### (1)
+	@@
+
+@POST
+single();
+
+@RULES
+_pl <-
+	_pl	### (1)
+	\+
+	\+
+	@@
+
+@POST
+single();
+
+@RULES
+_pl <-
+	_pl	### (1)
+	\-
+	\-
+	@@

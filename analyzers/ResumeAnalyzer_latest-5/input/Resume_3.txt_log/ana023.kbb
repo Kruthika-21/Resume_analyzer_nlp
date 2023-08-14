@@ -1,0 +1,12 @@
+headerZone
+  headerZone1: 
+    section=introduction
+  headerZone2: 
+    section=experience
+  headerZone3: 
+    section=education
+  headerZone4: 
+    section=projects
+  headerZone5: 
+    section=skills
+

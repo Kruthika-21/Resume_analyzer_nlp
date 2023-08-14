@@ -1,0 +1,39 @@
+###############################################
+# FILE: headers
+# SUBJ: comment
+# AUTH: David de Hilster
+# CREATED: 2023-2-2 10:10:34
+# MODIFIED:
+###############################################
+
+@NODES _ROOT
+
+# @CHECK
+# if (strisalpha(N("$text",1)))
+# {
+# 	succeed();
+# }
+# else
+# fail();
+
+@POST
+	if (num(N("words")) && num(N("words")) == num(N("caps"))&& num(N("words"))<=3 && strlength(N("$text"))>5 && !N("email") && N("isheader")){
+		N("level") = 1;
+		N("possible") = 1;
+		"headers.txt"<<N("$text")<<"\n";
+		single();
+	}
+	else if (num(N("words"))>=1 && num(N("words")) == num(N("upper")) && num(N("words"))<=3 && num(N("isheader")>=1)) {
+		N("level") = 2;
+		"headers.txt"<<N("$text")<<"\n";
+		single();
+	}
+
+@RULES
+_header <-
+	_LINE	### (1)
+	@@
+
+## It is classified here as : if the attribute words is in the line section
+# and all the words are caps then stringlength is minimum 5 and is not email
+# but it is a header

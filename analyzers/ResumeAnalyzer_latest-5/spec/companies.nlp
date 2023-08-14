@@ -1,0 +1,16 @@
+###############################################
+# FILE: companies
+# SUBJ: comment
+# AUTH: Kruthika
+# CREATED: 2023-6-5 18:15:44
+# MODIFIED:
+###############################################
+
+@PATH _ROOT _headerZone _LINE
+@PRE
+<1,1> var("cabbrev");
+@RULES
+_compind<-
+	_xALPHA	### (1)
+	@@
+# Change to abbreviations

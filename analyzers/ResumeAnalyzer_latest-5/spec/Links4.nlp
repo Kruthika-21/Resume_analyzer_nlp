@@ -1,0 +1,16 @@
+###############################################
+# FILE: Links4
+# SUBJ: comment
+# AUTH: Kruthika
+# CREATED: 2023-6-3 11:35:38
+# MODIFIED:
+###############################################
+
+@NODES _ROOT
+
+@POST
+pnrename(N(1),"_LINE");
+@RULES
+_xNIL <-
+	_conlink	### (1)
+	@@

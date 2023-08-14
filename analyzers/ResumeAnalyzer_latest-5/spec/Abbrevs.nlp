@@ -1,0 +1,14 @@
+###############################################
+# FILE: Abbrevs
+# SUBJ: comment
+# AUTH: Kruthika
+# CREATED: 2023-7-12 23:21:14
+# MODIFIED:
+###############################################
+
+@NODES _ROOT
+
+@RULES
+_xNIL <-
+	_xNIL	### (1)
+	@@

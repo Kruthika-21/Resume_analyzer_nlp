@@ -1,0 +1,30 @@
+headerZone
+  headerZone1: 
+    section=introduction
+    name="ARUN JINDAL"
+  headerZone2: 
+    section=experience
+  headerZone3: 
+    section=education
+    education=3
+    education1
+      grade: 
+        num="91.485001%"
+        text="9.63 CGPA"
+        type=CGPA
+        val="9.63"
+    education2
+      grade: 
+        text="92.67%"
+        type=percent
+        val="92.67"
+    education3
+      grade: 
+        text="90.80%"
+        type=percent
+        val="90.80"
+  headerZone4: 
+    section=projects
+  headerZone5: 
+    section=skills
+

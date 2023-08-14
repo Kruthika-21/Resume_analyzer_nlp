@@ -1,0 +1,37 @@
+headerZone
+  headerZone1: 
+    section=introduction
+    name="ANUVA GOYAL"
+  headerZone2: 
+    section=projects
+  headerZone3: 
+    section=education
+    education=3
+    education1
+      grade: 
+        num="88.825005%"
+        text="SGPA 9.35"
+        type=SGPA
+        val="9.35"
+    education2
+      grade: 
+        text="94%"
+        type=percent
+        val=94
+    education3
+      grade: 
+        num="95.000000%"
+        text="CGPA 10"
+        type=CGPA
+        val=10
+  headerZone4: 
+    section=skills
+  headerZone5: 
+    section=interests
+  headerZone6: 
+    section="my experience"
+  headerZone7: 
+    section=trainings
+  headerZone8: 
+    section=achievements
+

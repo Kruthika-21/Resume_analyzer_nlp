@@ -1,0 +1,40 @@
+headerZone
+  headerZone1: 
+    section=introduction
+    name="FATIMA UP"
+  headerZone2: 
+    section=achievements
+  headerZone3: 
+    section=internships
+  headerZone4: 
+    section="educational background"
+    education=3
+    education1
+      grade: 
+        num="89.775002%"
+        text="9.45 CGPA"
+        type=CGPA
+        val="9.45"
+    education2
+      grade: 
+        text="97.5 %"
+        type=percent
+        val="97.5"
+    education3
+      grade: 
+        text="90 %"
+        type=percent
+        val=90
+  headerZone5: 
+    section="academic projects"
+  headerZone6: 
+    section="co-curricular activities"
+  headerZone7: 
+    section="more information"
+  headerZone8: 
+    section="technical skills"
+  headerZone9: 
+    section=languages
+  headerZone10: 
+    section=interests
+

@@ -1,0 +1,15 @@
+###############################################
+# FILE: insertbullet
+# SUBJ: comment
+# AUTH: Kruthika
+# CREATED: 2023-7-17 18:27:12
+# MODIFIED:
+###############################################
+
+@PATH _ROOT _headerZone _prose
+@POST
+AddBullet(X("con2",3),N("$text",1));
+@RULES
+_xNIL <-
+	_xWILD [fail = _xEND]	### (1)
+	@@

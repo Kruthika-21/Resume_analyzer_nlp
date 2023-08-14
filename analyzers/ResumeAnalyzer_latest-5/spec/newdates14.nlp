@@ -1,0 +1,26 @@
+###############################################
+# FILE: newdates14
+# SUBJ: comment
+# AUTH: Kruthika
+# CREATED: 2023-6-29 6:21:0
+# MODIFIED:
+###############################################
+
+@PATH _ROOT _headerZone _prose
+
+@PRE
+<1,1> var("year");
+@CHECK
+if(num(N("$text",1))>=1900 && num(N("$text",1))<=2030)
+succeed();
+else
+fail();
+@POST
+S("datetype")=7;
+S("dateis")=str(1)+":"+str(1)+":"+str(N("$text",1));
+single();
+@RULES
+_year <-
+	_xNUM	### (1)
+	@@
+

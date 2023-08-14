@@ -1,0 +1,99 @@
+headerZone
+  headerZone1: 
+    section=introduction
+    name="ARUN JINDAL"
+    email="arunjindal@gmail.com"
+    "Telephone "=1
+    Telephone 1: 
+      type=mobile
+      area=948
+      prefix=312
+      station=7701
+      text=9483127701
+  headerZone2: 
+    section=experience
+    prose=3
+    links="bit.ly/3CqhUVI"
+    dateranges=1
+    prose1: 
+      text="A deep Learning framework was developed to identify the various parts of the and be able to change its colors."
+    prose2: 
+      text="A web application was developed to provide friendly interface to interact with various color combinations for the different parts allowing to try designs effortlessly."
+    prose3: 
+      text="A combination of Image processing and deep learning techniques along with flask, python, html and css was used in the application."
+    dateranges1
+      date1: 
+        day=1
+        month=6
+        year=2022
+      date2: 
+        day=1
+        month=8
+        year=2022
+      daterange: 
+        "no of day"=1
+        "no of months"=2
+        "no of years"=0
+  headerZone3: 
+    section=education
+    education=3
+    dateranges=1
+    dates=2
+    education1: 
+      dates="2020 - present"
+      insitute="REVA University"
+      city=bangalore
+      grade: 
+        num="91.485001%"
+        text="9.63 CGPA"
+        type=CGPA
+        val="9.63"
+    education2: 
+      dates=2020
+      insitute="Base Pu College"
+      city=bangalore
+      grade: 
+        text="92.67%"
+        type=percent
+        val="92.67"
+    education3: 
+      dates=2018
+      insitute="Vidyaniketan Public School"
+      city=bangalore
+      grade: 
+        text="90.80%"
+        type=percent
+        val="90.80"
+    dateranges1
+      date1: 
+        day=1
+        month=1
+        year=2020
+      date2: 
+        day=18
+        month=7
+        year=2023
+      daterange: 
+        "no of day"=7
+        "no of months"=6
+        "no of years"=3
+    dates1: 
+      year=2020
+      "date normalized"="1:1:2020"
+      text=2020
+    dates2: 
+      year=2018
+      "date normalized"="1:1:2018"
+      text=2018
+  headerZone4: 
+    section=projects
+    prose=3
+    prose1: 
+      text="Design of a Smart Time Switch A prototype was implemented on the LPC2148 microcontroller using assembly C. It integrates RTC for the timer start time and duration. It provides an interface to interact with the microcontroller using a set of switches and a LCD."
+    prose2: 
+      text="Modified the XV6 kernel to support lazy allocation of pages and implemented additional system calls to display number of physical and virtual pages for a given process."
+    prose3: 
+      text="Implemented in the form of a Web Interface using HTML, CSS and JS. Provides a way graphical interface to modify the graph and shows the shortest path between a pair of vertices along the steps taken to achieve it."
+  headerZone5: 
+    section=skills
+

@@ -1,0 +1,19 @@
+###############################################
+# FILE: companies4
+# SUBJ: comment
+# AUTH: Kruthika
+# CREATED: 2023-7-12 23:17:57
+# MODIFIED:
+###############################################
+
+@PATH _ROOT _headerZone _prose
+
+@POST
+AddCompany(X("con",2),N("$text",1));
+"Resume Companies.txt"<<"Companies : "<<N("$text",1)+" "+N("$text",2)<<"\n";
+# single();
+@RULES
+_company <-
+	_xWILD[plus match=(_xCAP \& \- \@ _xNUM)]	### (1)
+	_compind
+	@@

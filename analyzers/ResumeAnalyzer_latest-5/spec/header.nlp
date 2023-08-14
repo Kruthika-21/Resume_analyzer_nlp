@@ -1,0 +1,15 @@
+###############################################
+# FILE: header
+# SUBJ: comment
+# AUTH: Kruthika
+# CREATED: 2023-6-3 10:35:17
+# MODIFIED:
+###############################################
+
+@NODES _ROOT
+
+@RULES
+_xNIL <-
+	_xSTART	### (1)
+	_header
+	@@

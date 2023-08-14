@@ -1,0 +1,16 @@
+###############################################
+# FILE: addconcepts
+# SUBJ: comment
+# AUTH: Kruthika
+# CREATED: 2023-7-17 19:1:15
+# MODIFIED:
+###############################################
+
+@PATH _ROOT _headerZone _prose
+@POST
+S("con2") =  makeconcept(X("con",3),"prose");
+single();
+@RULES
+_xNIL <-
+	_xWILD [fail = _xEND]	### (1)
+	@@

@@ -1,0 +1,54 @@
+###############################################
+# FILE: addgrade
+# SUBJ: comment
+# AUTH: Kruthika
+# CREATED: 2023-6-29 19:19:8
+# MODIFIED:
+###############################################
+
+@PATH _ROOT _headerZone _LINE
+@PRE
+<1,1> var("cgpa");
+@CHECK
+L("header") = str(X("header",2));
+if(strcontainsnocase("education",L("header")))
+{
+	succeed();	
+}
+else
+fail();
+
+@POST
+
+S("con2") = MakeCountCon(X("con",2),"education");
+AddGrade(S("con2"),N(1));
+
+@RULES
+_xNIL <-
+	_percentage	### (1)
+	@@
+@CHECK
+L("header") = str(X("header",2));
+if(strcontainsnocase("education",L("header")))
+{
+	succeed();	
+}
+else
+fail();
+@POST
+S("con2") = MakeCountCon(X("con",2),"education");
+AddGrade(S("con2"),N(1));
+
+@RULES
+_xNIL <-
+	_percentage	### (1)
+	@@
+
+# @POST
+# S("con2") = MakeCountCon(X("con",2),"education");
+# AddPercentages(S("con2"),N("$text",1));
+
+# @RULES
+# _xNIL <-
+# 	_percentage	### (1)
+# 	@@

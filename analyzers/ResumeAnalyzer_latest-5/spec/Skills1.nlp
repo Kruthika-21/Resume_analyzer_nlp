@@ -1,0 +1,26 @@
+###############################################
+# FILE: Skills1
+# SUBJ: comment
+# AUTH: Kruthika
+# CREATED: 2023-6-20 22:21:27
+# MODIFIED:
+###############################################
+
+@PATH _ROOT _headerZone
+@CHECK
+L("header") = str(X("header",2));
+if(strcontainsnocase("skill",L("header")))
+{
+	succeed();	
+}
+else
+fail();
+@POST
+"Skills.txt" << split(N("$text",1),",") << "\n";
+S("con3") = MakeCountCon(X("con",2),"skill");
+AddSkills(S("con3"),N("$text",1));
+
+@RULES
+_xNIL <-
+	_xWILD [one match=(_LINE)]	### (1)
+	@@

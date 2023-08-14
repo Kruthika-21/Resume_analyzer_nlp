@@ -1,0 +1,18 @@
+###############################################
+# FILE: comps
+# SUBJ: comment
+# AUTH: Kruthika
+# CREATED: 2023-7-12 23:29:45
+# MODIFIED:
+###############################################
+
+@PATH _ROOT _LINE
+@PRE
+<1,1> var("cabbrev");
+@POST
+single();
+@RULES
+_compind <-
+	_xALPHA	### (1)
+	\.		### (2)
+	@@

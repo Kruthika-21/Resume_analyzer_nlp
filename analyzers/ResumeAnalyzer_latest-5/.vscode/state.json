@@ -1,0 +1,10 @@
+{
+    "visualText": [
+        {
+            "name": "Analyzer",
+            "type": "state",
+            "currentTextFile": "e:\\Resume-Analyzer-main\\Final-Analyzer\\Resume_analyzer\\analyzers\\ResumeAnalyzer_latest-5\\input\\PR2.txt",
+            "currentPassFile": "e:\\Resume-Analyzer-main\\Final-Analyzer\\Resume_analyzer\\analyzers\\ResumeAnalyzer_latest-5\\spec\\Lines.nlp"
+        }
+    ]
+}

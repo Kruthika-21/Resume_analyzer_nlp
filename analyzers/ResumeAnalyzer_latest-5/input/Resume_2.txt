@@ -1,0 +1,67 @@
+AKASH L MITTAL 
+B.E in Electronics and Communication 
+SURYA KIRAN, Plot 18 
+Manasa Residency 
+Vijayapura, 586103 
++918743539115 
+akashlmittal24@outlook.com
+bfiube23$@rvce.edu.in 
+ 
+EDUCATION 
+BMS College of Engineering, Bangalore — B.E in ECE 
+December 2020 - Present 
+ 
+ Maintaining CGPA of 8.49 in ﬁrst 4 semesters. 
+Sri Chaitanya CBSE school, Bangalore  
+April 2018 - March 2020 
+Scored 86.8% in ﬁnal XII board exams. 
+ 
+RQ Patil Public School, Kanakpura  
+March 2017 - March 2018 
+Scored 92% in X CBSE. 
+ 
+ 
+PROJECTS 
+Smart Blind Stick  
+Prototype which enables blind people to walk conveniently with the help 
+of distance sensor and LDR. Did with the help of Python and Java.
+DTMF based land rover  
+In this project study was done on DTMF and a Land Rover was designed 
+ on Proteus software. 
+Remote Vitals monitoring system   
+Demonstration of prototype which calculates the vitals of a patient like 
+BPM, ECG and send the data collected to the physician monitoring the 
+person remotely via cloud database. 
+ 
+Electronic Voting Machine 
+Demonstration of a voting machine working on Artix-7 FPGA kit, with the 
+ help of Verilog Hardware Descriptive Language (VHDL),  
+ 
+ 
+ LINKEDIN 
+www.linkedin.com/in/akash-l-mittal-395a7a223/
+ 
+SOFTWARE SKILLS 
+● C++ Programming 
+● C Programming 
+● Python Programming 
+● Logisim 
+● MATLAB 
+● Xilinx Vivado 
+● Keil uVision 5 
+● Lab View 
+● Cadence 
+● HTML 
+ 
+ 
+SKILLS 
+ 
+● Perfectionist  
+● Problem solving 
+● Adaptability 
+ 
+LANGUAGES 
+ 
+● English 
+● Kannada 
+● Hindi 

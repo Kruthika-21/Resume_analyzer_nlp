@@ -1,0 +1,24 @@
+###############################################
+# FILE: bullets4
+# SUBJ: comment
+# AUTH: Kruthika
+# CREATED: 2023-6-20 23:25:15
+# MODIFIED:
+###############################################
+
+@PATH _ROOT _headerZone _prose
+@CHECK
+L("header") = num(X("isbullet",3));
+if(L("header")==1)
+{
+	succeed();	
+}
+else
+fail();
+@POST
+excise(2,2);
+@RULES
+_xNIL <-
+	_xSTART								### (1)
+	_xWILD [one match=(_xCTRL _xPUNCT ● )]	### (2)
+	@@

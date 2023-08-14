@@ -1,0 +1,33 @@
+###############################################
+# FILE: dates4
+# SUBJ: comment
+# AUTH: Kruthika
+# CREATED: 2023-6-7 20:32:33
+# MODIFIED:
+###############################################
+
+@PATH _ROOT _headerZone _LINE
+@POST
+"Resume_op.txt"<<"Date :"<<N("$text",1)<<"\n";
+# AddDates(X("con",2),N("$text",1));
+if(!pnvar(N(1),"done")){
+S("con3")= MakeCountCon(X("con",2),"dates");
+AddDatesnew(S("con3"),N(1));
+}
+
+@RULES
+_xNIL <-
+	_xWILD[one match=(_date _year)]	### (1)
+	@@
+
+@POST
+"Resume_op.txt"<<"Date :"<<N("$text",1)<<"\n";
+# AddDates(X("con",2),N("$text",1));
+if(!pnvar(N(1),"done")){
+S("con4")= MakeCountCon(X("con",2),"dateranges");
+AddDatesnewer(S("con4"),N(1));
+}
+@RULES
+_xNIL <-
+	_daterange	### (1)
+	@@

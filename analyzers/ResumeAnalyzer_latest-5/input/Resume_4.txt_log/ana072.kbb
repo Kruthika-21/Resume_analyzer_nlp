@@ -1,0 +1,65 @@
+headerZone
+  headerZone1: 
+    section=introduction
+    name="Coleman Guthrie"
+    email="cole.guthrie@email.com"
+    Telephone=1
+    Telephone1: 
+      type=landline
+      area=456
+      station=7890
+      text="456-7890"
+  headerZone2: 
+    section="work experience"
+    prose=4
+    dateranges=1
+    dates=2
+    prose1: 
+      text="Directed project cycles to develop website and mobile applications, completing project scopes and risk assessments"
+    prose2: 
+      text="Coordinated tech team schedules with stakeholders and clients to deliver 97% of projects on time"
+      percentage="97%"
+    prose3: 
+      text="Supervised projects from start to finish to implement changes and adjust as needed, increasing referral rates by 78%"
+      percentage="78%"
+    prose4: 
+      text="Led creation of project timelines with 2 technicians to ensure deliverables were met and CRM platforms were implemented correctly, increasing customer satisfaction by 42%"
+      percentage="42%"
+    dateranges1
+      date1: 
+        day=1
+        month=1
+        year=2019
+      date2: 
+        day=18
+        month=7
+        year=2023
+      daterange: 
+        "no of day"=7
+        "no of months"=6
+        "no of years"=4
+    dates1: 
+      month=2014
+      year=2014
+      "date normalized"="1:2014:2014"
+      text="2014 - 2019"
+    dates2: 
+      month=2010
+      year=2010
+      "date normalized"="1:2010:2010"
+      text="2010 - 2014"
+  headerZone3: 
+    section=skills
+  headerZone4: 
+    section="educational background"
+    education1: 
+      date=1
+      insitute="university of California"
+      date1: 
+        month=2006
+        year=2006
+        "date normalized"="1:2006:2006"
+        text="2006 - 2010"
+  headerZone5: 
+    section=certifications
+

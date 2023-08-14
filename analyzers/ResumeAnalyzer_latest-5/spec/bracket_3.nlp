@@ -1,0 +1,25 @@
+###############################################
+# FILE: bracket_3
+# SUBJ: comment
+# AUTH: Kruthika
+# CREATED: 2023-6-14 14:11:19
+# MODIFIED:
+###############################################
+
+@PATH _ROOT _headerZone 
+@PRE
+<1,1> var("isopen");
+@POST
+pnrename(N(1),"_isopen");
+@RULES
+_xNIL <-
+	_LINE
+	@@
+@PRE
+<1,1> var("isclose");
+@POST
+pnrename(N(1),"_isclose");
+@RULES
+_xNIL <-
+	_LINE
+	@@

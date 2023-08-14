@@ -1,0 +1,38 @@
+###############################################
+# FILE: education3
+# SUBJ: comment
+# AUTH: Kruthika
+# CREATED: 2023-6-22 13:19:35
+# MODIFIED:
+###############################################
+
+@PATH _ROOT _headerZone _LINE
+@POST
+"Collegenames.txt"<<N("$text",1)<< "\n";
+"Collegenames.txt"<<"City: "<<N("$text",3)<< "\n";
+L("cal")="education"+str(G("eduval")++);
+L("con")=getconcept(X("con",2),L("cal"));
+AddEducation(L("con"),N("name",1));
+AddCity(L("con"),N("$text",3));
+@RULES
+_xNIL <-
+	_eduname
+	_xWILD [fail=_city]
+	_city	### (1)
+	@@
+
+@POST
+"Collegenames.txt"<<N("$text",1)<< "\n";
+L("City") = CheckCity(X(2));
+L("cal")="education"+str(G("eduval")++);
+L("con")=getconcept(X("con",2),L("cal"));
+AddEducation(L("con"),N("name",1));
+if(L("City")){
+	"Collegenames.txt"<<"City: "<<L("City")<< "\n";
+	AddCity(L("con"),L("City"));
+}
+
+@RULES
+_xNIL <-
+	_eduname
+	@@

@@ -1,0 +1,19 @@
+###############################################
+# FILE: education
+# SUBJ: comment
+# AUTH: Kruthika
+# CREATED: 2023-6-22 11:6:19
+# MODIFIED:
+###############################################
+
+@PATH _ROOT _headerZone _LINE
+
+@POST
+CheckSchool(N(1));
+if(!pnvar(X(3),"hasedu"))
+pnmakevar(X(3),"hasedu",1);
+G("eduval")=1;
+@RULES
+_xNIL <-
+	_edu	### (1)
+	@@

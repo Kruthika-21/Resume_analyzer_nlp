@@ -1,0 +1,12 @@
+headerZone
+  headerZone1: 
+    section=introduction
+  headerZone2: 
+    section="work experience"
+  headerZone3: 
+    section=skills
+  headerZone4: 
+    section="educational background"
+  headerZone5: 
+    section=certifications
+

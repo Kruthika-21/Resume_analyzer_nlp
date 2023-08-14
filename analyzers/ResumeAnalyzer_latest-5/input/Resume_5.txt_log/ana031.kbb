@@ -1,0 +1,31 @@
+headerZone
+  headerZone1: 
+    section=introduction
+    name="VAROON MARION"
+  headerZone2: 
+    section=education
+    education=2
+    education1
+      grade: 
+        num="92.245003%"
+        text="CGPA - 9.71"
+        type=CGPA
+        val="9.71"
+    education2
+      grade: 
+        text="97.2%"
+        type=percent
+        val="97.2"
+  headerZone3: 
+    section="work experience"
+  headerZone4: 
+    section=skills
+  headerZone5: 
+    section=projects
+  headerZone6: 
+    section="certificates & publications"
+  headerZone7: 
+    section=achievements
+  headerZone8: 
+    section=interests
+

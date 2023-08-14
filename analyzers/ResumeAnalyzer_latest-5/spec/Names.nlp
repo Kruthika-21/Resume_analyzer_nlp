@@ -1,0 +1,21 @@
+###############################################
+# FILE: Names
+# SUBJ: comment
+# AUTH: Kruthika
+# CREATED: 2023-6-6 20:58:25
+# MODIFIED:
+###############################################
+
+@PATH _ROOT _headerZone _LINE
+@POST
+L("node") = pnnext(L("node"));
+"Resume Output.txt"<<"Name : "<<phrasetext()<<"\n";
+# while (L("node")) {
+# 	"Resume Output.txt"<<"Name : "<<L("node");
+# 	L("node") = pnnext(L("node"));
+# }
+# "Resume Output.txt"<<"\n"
+@RULES
+_xNIL <-
+	name	### (1)
+	@@

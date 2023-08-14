@@ -1,0 +1,17 @@
+###############################################
+# FILE: name
+# SUBJ: comment
+# AUTH: Kruthika
+# CREATED: 2023-7-8 12:25:18
+# MODIFIED:
+###############################################
+
+@PATH _ROOT _headerZone 
+@POST
+AddName(X("con",2),N("$text",2));
+
+@RULES
+_xNIL <-
+	_xSTART
+	_LINE	### (1)
+	@@

@@ -1,0 +1,22 @@
+###############################################
+# FILE: bracket2
+# SUBJ: comment
+# AUTH: Kruthika
+# CREATED: 2023-6-13 19:10:59
+# MODIFIED:
+###############################################
+
+@PATH _ROOT _headerZone _LINE
+@POST
+X("isopen",3)=N("open",1);
+
+@RULES
+_xNIL <-
+	_xWILD [one match=(_opens)]	### (1)
+	@@
+@POST
+X("isclose",3)=N("open",1);
+@RULES
+_xNIL <-
+	_xWILD [one match=(_close)]	### (1)
+	@@

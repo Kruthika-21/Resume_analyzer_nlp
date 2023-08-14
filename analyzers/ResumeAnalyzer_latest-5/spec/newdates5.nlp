@@ -1,0 +1,55 @@
+###############################################
+# FILE: newdates5
+# SUBJ: comment
+# AUTH: Kruthika
+# CREATED: 2023-6-11 20:52:0
+# MODIFIED:
+###############################################
+@PATH _ROOT _headerZone _LINE
+@POST
+	if(strequalnocase(N("$text",4),"current")||strequalnocase(N("$text",4),"present")||strequalnocase(N("$text",4),"now"))
+	{
+		L("isdate")=CheckDateRange(N("dateis",2),N("dateis",2),"12:07:2023",1);
+		S("date1")=N("dateis",2);
+	S("date2")="18:07:2023";
+	}
+	else
+	{
+		L("isdate")=CheckDateRange(N("dateis",2),N("dateis",4),"12:07:2023",0);
+		S("date1")=N("dateis",2);
+	S("date2")=N("dateis",4);
+	}
+	S("daterange")=L("isdate");	
+	single();
+@RULES
+_daterange <-
+	from [optional]								### (1)
+	_year										### (2)
+	_xWILD [one match=(\- to till )]				### (3)
+	_xWILD [one match=( _year present now current )]	### (4)
+	@@
+
+
+@POST
+if(strequalnocase(N("$text",4),"current")||strequalnocase(N("$text",4),"present")||strequalnocase(N("$text",4),"now"))
+	{
+		L("isdate")=CheckDateRange(N("dateis",2),N("dateis",2),"12:07:2023",1);
+	S("date1")=N("dateis",2);
+	S("date2")="18:07:2023";
+	}
+	else
+	{
+		L("isdate")=CheckDateRange(N("dateis",2),N("dateis",4),"12:07:2023",0);
+	S("date1")=N("dateis",2);
+	S("date2")=N("dateis",4);
+	}
+S("daterange")=L("isdate");
+single();
+@RULES
+_daterange<-
+	from [optional]						### (1)
+	_date								### (2)
+	_xWILD [one match=(to till \-)]		### (3)
+	_xWILD [one match=(_date present now current)]	### (4)
+	@@
+

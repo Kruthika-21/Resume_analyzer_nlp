@@ -1,0 +1,20 @@
+###############################################
+# FILE: kbinit
+# SUBJ: comment
+# AUTH: Kruthika
+# CREATED: 2023-6-26 18:13:25
+# MODIFIED:
+###############################################
+
+@CODE
+
+# G("prose") = getconcept(findroot(),"prose");
+# if (!G("prose")) G("prose") = makeconcept(findroot(),"prose");
+# G("bullet") = getconcept(findroot(),"bullet");
+# if (!G("bullet")) G("bullet") = makeconcept(findroot(),"bullet");
+G("eduval")=1;
+G("headerZone") = getconcept(findroot(),"headerZone");
+if (!G("headerZone")) G("headerZone") = makeconcept(findroot(),"headerZone");
+# SaveKB("mykb.kbb",G("kb"),2);
+
+@@CODE

@@ -1,0 +1,18 @@
+headerZone
+  headerZone1: 
+    section=introduction
+  headerZone2: 
+    section=education
+  headerZone3: 
+    section="work experience"
+  headerZone4: 
+    section=skills
+  headerZone5: 
+    section=projects
+  headerZone6: 
+    section="certificates & publications"
+  headerZone7: 
+    section=achievements
+  headerZone8: 
+    section=interests
+

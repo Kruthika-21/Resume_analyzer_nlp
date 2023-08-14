@@ -1,0 +1,27 @@
+###############################################
+# FILE: begining
+# SUBJ: comment
+# AUTH: Kruthika
+# CREATED: 2023-6-13 13:7:5
+# MODIFIED:
+###############################################
+
+@PATH _ROOT _headerZone _LINE
+
+@POST
+X("next",3)=1;
+@RULES
+_xNIL <-
+	_xWILD [one match=(\- \: \= \, )]	### (1)
+	_xEND	### (2)
+	@@
+
+@PRE
+<1,1> var("bet");
+@POST
+X("next",3)=1;
+@RULES
+_xNIL <-
+	_xALPHA	### (1)
+	_xEND	### (2)
+	@@

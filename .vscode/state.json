@@ -1,0 +1,9 @@
+{
+    "visualText": [
+        {
+            "name": "Analyzer",
+            "type": "state",
+            "currentAnalyzer": "e:\\Resume-Analyzer-main\\Final-Analyzer\\Resume_analyzer\\analyzers\\ResumeAnalyzer_latest-5"
+        }
+    ]
+}

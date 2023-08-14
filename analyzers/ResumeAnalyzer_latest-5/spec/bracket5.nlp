@@ -1,0 +1,16 @@
+###############################################
+# FILE: bracket5
+# SUBJ: comment
+# AUTH: Kruthika
+# CREATED: 2023-6-15 18:44:18
+# MODIFIED:
+###############################################
+
+@PATH _ROOT _headerZone _compline _isclose
+@POST
+splice(1,1);
+
+@RULES
+_xNIL <-
+	_close	### (1)
+	@@

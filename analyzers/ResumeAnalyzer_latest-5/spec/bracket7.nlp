@@ -1,0 +1,32 @@
+###############################################
+# FILE: bracket7
+# SUBJ: comment
+# AUTH: Kruthika
+# CREATED: 2023-6-15 18:11:36
+# MODIFIED:
+###############################################
+
+@PATH _ROOT _headerZone _compline
+
+
+@POST
+splice(1,1);
+splice(2,2);
+pnrename(X(3),"_LINE");
+@RULES
+_xNIL <-
+	_isopen		### (1)
+	_isclose	### (2)
+	@@
+
+@POST
+splice(1,1);
+splice(2,2);
+splice(3,3);
+pnrename(X(3),"_LINE");
+@RULES
+_xNIL <-
+	_isopen
+	_xWILD[fail=_isclose]
+	_isclose	### (1)
+	@@

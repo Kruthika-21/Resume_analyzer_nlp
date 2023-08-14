@@ -1,0 +1,43 @@
+###############################################
+# FILE: bracket_4
+# SUBJ: comment
+# AUTH: Kruthika
+# CREATED: 2023-6-14 15:21:11
+# MODIFIED:
+###############################################
+
+@PATH _ROOT _headerZone 
+@CHECK
+if(N("isopen",1)==N("isclose",3))
+{
+	succeed();
+}
+else
+{
+	fail();
+}
+@POST
+single();
+@RULES
+_compline <-
+	_isopen
+	_xWILD[fail=_isclose]
+	_isclose	### (1)
+	@@
+# @CHECK
+# if(N("isopen",1)==N("isopen",3)&&N("isopen",1)==1)
+# {
+# 	succeed();
+# }
+# else
+# {
+# 	fail();
+# }
+# @POST
+# single();
+# @RULES
+# _compline <-
+# 	_isopen
+# 	_xWILD[fail=_isclose]
+# 	_isopen	### (1)
+# 	@@

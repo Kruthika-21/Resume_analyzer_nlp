@@ -1,0 +1,14 @@
+###############################################
+# FILE: sentence1
+# SUBJ: comment
+# AUTH: Kruthika
+# CREATED: 2023-6-5 16:50:12
+# MODIFIED:
+###############################################
+
+@PATH _ROOT _headerZone _LINE
+
+@RULES
+_sentence  <-
+	_xWILD [one match=(\. \!)]	### (1) 
+	@@

@@ -1,0 +1,15 @@
+###############################################
+# FILE: sentend
+# SUBJ: comment
+# AUTH: Kruthika
+# CREATED: 2023-6-18 17:29:48
+# MODIFIED:
+###############################################
+
+@PATH _ROOT _headerZone _LINE
+
+@RULES
+_sentend <-
+	_xWILD [one match=(\. \? \!)]	### (1)
+	_xEND							### (2)
+	@@

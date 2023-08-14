@@ -1,0 +1,74 @@
+###############################################
+# FILE: newdates2
+# SUBJ: comment
+# AUTH: Kruthika
+# CREATED: 2023-6-11 19:59:20
+# MODIFIED:
+###############################################
+
+@PATH _ROOT _LINE
+
+@CHECK
+if(strequal(N("$text",2),N("$text",5))){
+	if(N("day",1)== 1 && N("year",7)==1 && N("month",4)==1){
+		G("decl")=1;
+		succeed();
+	}
+	else if(N("year",1)== 1 && N("day",7)==1 && N("month",4)==1)
+	{
+		G("decl")=2;
+		succeed();
+	}
+	else{
+	fail();
+	}
+}
+else{
+	fail();
+}
+
+@POST
+S("datetype")=3;
+S("datetype")=3;
+L("month")=N("$text",4);
+if(num(G("decl"))==1){
+	L("day")=N("$text",1);
+ if(num(N("$text",7))>0 && num(N("$text",7))<=30)
+ {
+  L("year")=2000+num(N("$text",7));
+ }
+ else if (num(N("$text",7))>51 && num(N("$text",7))<=99)
+ {
+  L("year")=1900+num(N("$text",7));
+ }
+ else
+ L("year")=N("$text",7);
+}
+else if(num(G("decl"))==2){
+	L("day")=N("$text",7);
+ if(num(N("$text",1))>=0 && num(N("$text",1))<=30)
+ {
+  L("year")=2000+num(N("$text",1));
+ }
+ else if (num(N("$text",1))>51 && num(N("$text",1))<=99)
+ {
+  L("year")=1900+num(N("$text",1));
+ }
+ else
+ L("year")=N("$text",1);
+}
+ S("dateis")=str(L("day"))+":"+str(L("month"))+":"+str(L("year"));
+single();
+
+@RULES
+_date <-
+	_xNUM 	### (1)
+	_xWILD[min=0 max=1 match=(\- \/ _xWHITE \.)] ### (2)
+	_xWILD[min=0 max=0 match=(_xWHITE)]	### (3)
+	_xNUM ### (4)
+	_xWILD[min=0 max=1 match=(\- \/ _xWHITE \.)] ### (5)
+	_xWILD[min=0 max=0 match=(_xWHITE)]	### (6)	
+	_xNUM	[trig] ### (7)	
+	@@
+
+

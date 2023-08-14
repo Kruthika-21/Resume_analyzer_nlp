@@ -1,0 +1,47 @@
+###############################################
+# FILE: adddate1
+# SUBJ: comment
+# AUTH: Kruthika
+# CREATED: 2023-6-30 11:8:31
+# MODIFIED:
+###############################################
+
+@PATH _ROOT _headerZone _LINE
+@CHECK
+L("header") = str(X("header",2));
+if(strcontainsnocase("education",L("header")))
+{
+	succeed();	
+}
+else
+fail();
+@POST
+L("cal")="education"+str(G("eduval")++);
+L("con")=getconcept(X("con",2),L("cal"));
+L("conc")=MakeCountCon(L("con"),"date");
+L("done")=pnmakevar(N(1),"done",1);
+AddDatesnew(L("conc"),N(1));
+@RULES
+_xNIL <-
+	_xWILD[one match=(_date _year)]	### (1)
+	@@
+
+@CHECK
+L("header") = str(X("header",2));
+if(strcontainsnocase("education",L("header")))
+{
+	succeed();	
+}
+else
+fail();
+
+@POST
+L("cal")="education"+str(G("eduval")++);
+L("con")=getconcept(X("con",2),L("cal"));
+L("conc")=MakeCountCon(L("con"),"daterange");
+AddDatesnewer(L("conc"),N(1));
+L("done")=pnmakevar(N(1),"done",1);
+@RULES
+_xNIL <-
+	_daterange	### (1)
+	@@

@@ -1,0 +1,21 @@
+OOPs
+java
+c
+python
+c
+Machine Learning
+Deep Learning
+Computer Vision
+DevOps
+Cloud
+Qiskit
+Containers
+Azure
+Operating Systems
+Linear Algebra
+Data Structures and Algorithms
+OOPs with Java
+Computer Networks
+Computer Systems Design
+Discrete Mathematics
+Embedded Systems
